@@ -4,5 +4,5 @@ git init
 git add .
 git commit -m "Version inicial"
 git branch -M main
-git remote add origin https://github.com/F1Data/F1Data.github.io.git
+git remote add origin https://github.com/AndresBorrelli/AndresBorrelli.github.io
 git push -u origin main
