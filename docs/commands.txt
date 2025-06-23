@@ -1,0 +1,8 @@
+sass --watch --no-source-map resources\styles\scss:resources\styles\css --style=compressed
+
+git init
+git add .
+git commit -m "Version inicial"
+git branch -M main
+git remote add origin https://github.com/F1Data/F1Data.github.io.git
+git push -u origin main
