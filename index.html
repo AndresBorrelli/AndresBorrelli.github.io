@@ -8,20 +8,69 @@
 </head>
 <body>
 
-    <section id="main-section" class="portfolio-section">
-        <div class="main-photo-box">
-            <img src="./resources/images/andresborrelli.png" alt="Andrés E. Borrelli" />
+    <header class="main-header">
+        <div class="logo-box">
+            <span>Andrés E. Borrelli</span>
         </div>
-        <div class="main-text-box">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio asperiores enim tenetur vitae deserunt maxime id ipsa. Amet accusantium necessitatibus vero, doloremque deleniti adipisci ipsam voluptatem obcaecati autem nisi ullam.</p>
-            <p>Nostrum, similique. Fugiat, aut explicabo? Totam vel, ad tempore alias repellat architecto aliquam dolorem ipsum in quas accusamus facilis officiis fugiat expedita? Praesentium saepe similique necessitatibus! Et accusamus hic iste.</p>
-            <p>Dicta iure quo cumque tenetur, ipsa velit sit molestiae, aut obcaecati mollitia minima delectus laborum necessitatibus? Dolorem facilis libero illo aliquam necessitatibus magni at omnis vero cum. Consequuntur, officiis vero?</p>
-            <p>Impedit, hic! Sunt saepe placeat, officia aut quos ab perspiciatis excepturi id numquam voluptatum tempore inventore sequi consequuntur, architecto cupiditate nam voluptatibus? Debitis modi laudantium velit laboriosam quos, optio dolore.</p>
-        </div>
-    </section>
+        <input type="checkbox" id="main-nav-button" class="main-nav-button"/>
+        <label class="main-nav-button-label" for="main-nav-button"></label>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#link1" title="Inicio">Inicio</a></li>
+                <li><a href="#link2" title="Sobre mí">Sobre mí</a></li>
+                <li><a href="#link3" title="Experiencia laboral">Experiencia laboral</a></li>
+                <li>
+                    <a href="#link4" title="Artículos">Artículos</a>
+                    <ul>
+                        <li><a href="#link41" title="Programación">Programación</a></li>
+                        <li><a href="#link42" title="Arquitectura de software">Arquitectura de software</a></li>
+                    </ul>
+                </li>
+                <li><a href="#link5" title="Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section id="section-exp">
+    <div class="main-container">
 
-    </section>
+        <section id="home-section" class="pf-section home-section">
+            <div class="photo-area">
+                <div class="photo-box">
+                    <div class="photo-frame">
+                        <img src="./resources/images/andresborrelli3.png" alt="Andrés E. Borrelli" />
+                    </div>                    
+                </div>
+            </div>
+            <div class="title-area">
+                <h1>Andrés E. Borrelli</h1>
+                <h2>Desarrollador de software</h2>
+            </div>
+            <div class="text-area">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </section>
+
+        <section id="about-me-section" class="pf-section about-me-section">
+            <h1>Sobre mí</h1>
+            <p>Más de 40 años de trayectoria en el sector financiero, con experiencia en arquitecturas de software, desarrollo de aplicaciones core bancarias y banca electrónica (Home Banking, Terminales de Autoservicio).</p>
+            <p>Sólida experiencia en diseño de arquitecturas orientadas a servicios (SOA) y microservicios, así como en la gestión de infraestructuras (on-premise y cloud - AWS).</p>
+            <p>Capacidad en la implementación de soluciones complejas y la optimización de procesos que impactan directamente en la eficiencia operativa y la experiencia del usuario.</p>
+            <p>Liderazgo técnico y habilidades de coordinación de equipos para el desarrollo e implementación de sistemas críticos.</p>
+        </section>
+
+        <section id="job-exp-section" class="pf-section job-exp-section">
+            <h1>Experiencia laboral</h1>
+        </section>
+
+        <section id="articles-section" class="pf-section articles-section">
+            <h1>Artículos</h1>
+        </section>
+
+        <section id="contact-section" class="pf-section contact-section">
+            <h1>Contacto</h1>
+        </section>
+        
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,55 @@
+/* -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+/* -------------------------------------------------------------------------- */
+/* Mobile por defecto */
+html {
+    font-family:  var(--base-font);
+    font-size: 16px;
+}
+
+/* Mobile chico */
+
+@media (min-width: 481px) {
+  body {
+    font-size: 17px;
+  }
+}
+
+/* Tablet chica */
+
+@media (min-width: 601px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Tablet grande */
+
+  @media (min-width: 769px) {
+  body {
+    font-size: 19px;
+  }
+}
+
+/* Desktop y Laptop chicos */
+
+@media (min-width: 1025px) {
+  body {
+    font-size: 20px; 
+  }
+}
+
+/* Monitores Grandes */
+@media (min-width: 1281px) {
+  body {
+    font-size: 21px; 
+  }
+}
+
+/* Pantallas Extra Grandes */
+@media (min-width: 1441px) {
+  body {
+    font-size: 22px; 
+  }
+}
