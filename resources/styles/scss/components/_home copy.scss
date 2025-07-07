@@ -1,0 +1,69 @@
+/* -------------------------------------------------------------------------- */
+.home-section {
+    
+    .photo-area {
+        display: flex;
+        flex-direction: column;
+        height: 60%; width: 100%;
+        background-color: var(--pf-color-a);
+        vertical-align: bottom;
+        .photo-box {
+            height: 60%; width: 100%;
+            .photo-frame {
+                width: 60%;
+                margin-inline: auto;
+                background-color: #fff;
+                border-radius: 50%;
+                overflow: hidden;
+                background-color: var(--pf-color-b);
+                img {
+                    width: 100%;
+                    margin-inline: auto;
+                    filter: brightness(110%);
+                }
+            }
+        }
+        .misc-box {
+            height: 40%; width: 100%;
+            border: 1px solid var(--pf-color-b);
+            span {
+                color: var(--pf-color-b);
+            }
+            .email-symbol {
+                color: var(--pf-color-b);
+                &::before {
+                    content: '\2709';
+                }
+            }
+        }
+    } 
+
+    .title-area {
+        display: inline;
+        height: 20%; width: 100%;
+         h1,h2 {
+            font-family: var(--title-font);
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            color: var(--pf-color-a);
+            padding-inline: 0.5rem;
+        }
+        h2 {
+            color: var(--pf-color-c);
+            font-size: 0.8rem;
+        }
+    }
+    .text-area {
+        display: inline;
+        height: 20%; width: 100%;
+        p {
+            font-family: var(--base-font);
+            color: var(--pf-color-c);
+            font-size: 0.8rem;
+            padding-inline: 0.5rem;
+        }
+    }
+
+}
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */

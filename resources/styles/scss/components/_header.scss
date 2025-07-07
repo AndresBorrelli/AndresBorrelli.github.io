@@ -1,39 +1,48 @@
 /* -------------------------------------------------------------------------- */
 .main-header {
-
     position: fixed;
-    width: 100%;
+    height: 2.8rem; width: 100%;
+    display: block;
     z-index: 99;
-
     .logo-box {
-        position: absolute;
-        top: 0.5rem; left: 0.5rem;
+        float: left;
+        span {
+            line-height: 2.8rem;
+            padding-left: 0.5rem;
+        }
     }
     .main-nav-button {
         display: none;
     }
     .main-nav-button-label {
         position: absolute;
-        top: 0.5rem; right: 0.5rem;
-        z-index: 9;
+        right: 0px;
+        padding-right: 0.5rem;
+        line-height: 2.8rem;
+        z-index: 999;
         &::before {
             content: '\2630';
             font-size: 1.6rem;
-            color: red;
+            color: var(--color-e);
             cursor: pointer;
         }
         &:hover {
-            color: #fff;
+            color: var(--color-yy);
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
         }
     }
     .main-nav-button:checked ~ .main-nav-button-label::before {
         content: '\2715';
     }
+    .main-nav-button:checked ~ .main-nav {
+        top: 0px;
+    }
  
     .main-nav {
+        display: block;
         position: absolute;
-        height: 100dvh; width: 100%; left: -101%;
-        background-color: #5D4038;
+        height: 100dvh; width: 100%; top:-100dvh;
+        background-color: var(--color-b);
         transition: 250ms ease;
         ul {
             padding: 1.2rem;
@@ -42,9 +51,9 @@
                 a {
                     font-size: 1.2rem;
                     line-height: 3rem;
-                    color: #D9CEBC;
+                    color: var(--color-y);
                     &:hover {
-                            color: #fff;
+                            color: var(--color-yy);
                     }
                 }
                 ul {
@@ -59,10 +68,6 @@
 
             }
         }
-    }
-
-    .main-nav-button:checked ~ .main-nav {
-        left: 0px;
     }
 }
 /* -------------------------------------------------------------------------- */

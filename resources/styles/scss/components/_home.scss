@@ -1,53 +1,71 @@
 /* -------------------------------------------------------------------------- */
 .home-section {
-    
-    .photo-area {
-        display: inline;
-        width: 100%;
+    display: flex; 
+    gap: 0px;
+    width: 100%;
+    .photo-area { 
+        position: relative;
+        flex: 100% 1 1;
+        height: 60%;
+        background-color: var(--color-d);
+        padding-top: 3rem;
         .photo-box {
-            height: 60%; width: 100%;
-            background-color: var(--bg-color-a);
             .photo-frame {
-                width: 60%;
+                height: 250px; width: 250px;
                 margin-inline: auto;
-                background-color: #fff;
                 border-radius: 50%;
                 overflow: hidden;
-                background-color: var(--bg-color-b);
-            }
-            img {
-                width: 100%;
-                margin-inline: auto;
-                filter: brightness(110%);
+                background-color: var(--color-y);
+                img {
+                    width: 100%
+                }
             }
         }
-    } 
-
+        .misc-box {
+            position: absolute;
+            bottom: 0px;
+            padding: 0.5rem; margin: 0.5rem;
+            vertical-align: middle;
+            border: 1px solid var(--color-c);
+            border-radius: 3px;
+            .email-symbol::before {
+                content: '\2709';
+            }
+            .email-address {
+                font-family: var(--font-b);
+                font-size: 0.7rem;
+            }
+        }
+    }
     .title-area {
-        display: inline;
-        height: 20%; width: 100%;
-        padding: 0.5rem;
-        h1,h2 {
-            font-family: var(--title-font);
-            font-size: 1.2rem;
-            line-height: 1.2rem;
-            color: var(--bg-color-a);
+        flex: 100% 1 1;
+        height: 10%;
+        background-color: var(--color-y);
+        h1 {
+            font-family: var(--font-b);
+            font-size: 1.1rem;
+            color: var(--color-d);
+            margin: 0px;
+            padding: 0.5rem 0.5rem;
         }
         h2 {
-            color: var(--bg-color-a);
-            font-size: 0.8rem;
+            font-family: var(--font-b);
+            font-size: 1rem;
+             margin: 0px;
+             padding: 0.5rem 0.5rem;
         }
     }
     .text-area {
-        display: inline;
-        height: 20%; width: 100%;
-        padding: 0.5rem;
+        flex: 100% 1 1;
+        height: 20%;
+        background-color: var(--color-y);
         p {
-            font-family: var(--base-font);
-            color: var(--bg-color-a);
+            font-family: var(--font-a);
+            padding: 0.5rem;
         }
     }
 
+ 
 }
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
