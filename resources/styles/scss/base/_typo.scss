@@ -4,9 +4,10 @@
 /* -------------------------------------------------------------------------- */
 /* Mobile por defecto */
 html {
-    font-family:  var(--font-1);
+    font-family: Comfortaa;
     font-size: 16px;
     line-height: 1.1rem;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Mobile chico */
