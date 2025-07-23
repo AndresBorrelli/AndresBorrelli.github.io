@@ -4,17 +4,25 @@
 
     display: block;
     position: fixed;
-    height: 3rem; width: 100%;
+    width: 100%;
+
+    .logo-box {
+        a {
+            display: flex;
+            font-family: Poppins;
+            font-size: 0.7rem;
+            color: black;
+        }
+    }
 
     .main-nav-button {
         display: block;
-        height: 1.5rem; width: 1.5rem;
         position: absolute;
-        right: 0px;
+        right: 0px; top: 0px;
         font-size: 1.4rem;
-        margin: .5rem .5rem;
+        margin: .1rem .1rem;
         &:hover {
-            color: orangered;
+            color: #ff4500;
             font-weight: bold;
         }
     }
