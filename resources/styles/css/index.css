@@ -112,13 +112,19 @@ a {
 .main-header {
   display: block;
   position: fixed;
+  height: 2rem;
   width: 100%;
 }
 .main-header .logo-box a {
   display: flex;
   font-family: Poppins;
   font-size: 0.7rem;
+  line-height: 2rem;
   color: black;
+}
+.main-header .logo-box a img {
+  height: 2rem !important;
+  border-radius: 3px;
 }
 .main-header .main-nav-button {
   display: block;
@@ -143,6 +149,7 @@ a {
   position: absolute;
   height: 100dvh;
   width: 100%;
+  top: 0px;
   left: -101%;
   transition: 250ms ease;
   background-color: #FFFFFF;
@@ -176,6 +183,7 @@ a {
 
 .name-and-pro {
   order: 2;
+  padding: 1rem;
 }
 .name-and-pro h1 {
   font-family: Poppins;
@@ -193,6 +201,7 @@ a {
   order: 4;
   font-size: 1rem;
   font-weight: 100;
+  padding: 1rem;
 }
 
 .photo-area {
@@ -228,7 +237,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  background-color: #F3F2EC;
+  background-color: #EDF1FD;
 }
 .main-container .main-section {
   align-self: stretch;
