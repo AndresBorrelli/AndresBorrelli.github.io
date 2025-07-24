@@ -1,20 +1,7 @@
 /* -------------------------------------------------------------------------- */
 @use './base/typo';
 @use './base/resets';
-@use './components/header';
-@use './components/home';
+@use './components/header'
 /* -------------------------------------------------------------------------- */
-.main-container {
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    background-color: #EDF1FD;
-    .main-section {
-        align-self: stretch;
-        display: block;
-        min-height: 100dvh; width: 100%;
-            padding-top: 2rem;
-    }
-}
+
 /* -------------------------------------------------------------------------- */

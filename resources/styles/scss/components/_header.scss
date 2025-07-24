@@ -1,44 +1,45 @@
 /* -------------------------------------------------------------------------- */
 
 .main-header {
-
-    display: block;
     position: fixed;
     height: 2rem; width: 100%;
-
-    .logo-box {
-        a {
-            display: flex;
-            font-family: Poppins;
-            font-size: 0.7rem;
-            line-height: 2rem;
-            color: black;
-            img {
-                height: 2rem  !important;
-                border-radius: 3px;
-            }
+    padding: 0.2rem;
+    border: 1px solid black;
+    .logo-link {
+        img {
+            height: 100%;
+            border-radius: 3px;
         }
     }
-
-    .main-nav-button {
+    .menu-button-opener, .menu-button-closer {
         display: block;
         position: absolute;
-        right: 0px; top: 0px;
+        top: 0px; right: 0px;
         font-size: 1.4rem;
-        margin: .1rem .1rem;
-        &:hover {
-            color: #ff4500;
-            font-weight: bold;
+        padding: 6px;
+        &::before {
+            background-color: white;
+        }
+        &:hover::before {
+            color: orangered;
         }
     }
-    .main-nav-open-button::before {
+    .menu-button-opener { 
+        z-index: 9;
+    }
+    .menu-button-opener::before {
         content: '\2630';
-
     }
-    .main-nav-open-button:focus + .main-nav {
-        left: 0px;
+    .menu-button-opener:focus + .main-nav {
+        left: 0px !important;
     }
-
+    .menu-button-closer {
+        z-index: 99;
+        
+    }
+    .menu-button-closer:before {
+        content: '\2715';
+    }
     .main-nav {
         display: block;
         position: absolute;
@@ -46,26 +47,6 @@
         top: 0px; left: -101%;
         transition: 250ms ease;
         background-color: #FFFFFF;
-        .main-nav-close-button::before {
-            content: '\2715'
-        }
-        ul {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: flex-start;
-            gap: 2rem;
-            height: 100%; width: 100%;
-            padding: 3rem 1rem 1rem 2rem;
-            list-style-type: none;
-            li {
-                a {
-                    font-size: 1.4rem;
-                    &:hover {
-                        color: #ff4500;
-                    }
-                }
-            }
-        }
     }
 }
 
