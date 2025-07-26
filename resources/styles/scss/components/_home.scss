@@ -1,55 +1,50 @@
 /* -------------------------------------------------------------------------- */
 .home-section {
     display: flex !important;
-    flex-flow: row wrap;
-}
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    .photo-area {
+        position: relative;
+        .photo-box {
 
-.name-and-pro {
-    order: 2;
-    padding: 1rem;
-    h1 {
-        font-family: Poppins;
-        font-size: 1.1rem;
-        font-weight: 100;
-        color: #ff4500;
+        }
+        .some-data-box {
+            position: absolute;
+            bottom: 0px;
+            vertical-align: middle;
+            a {
+                display: flex;
+                align-items: center;
+                gap: 0.2rem;
+                font-size: 0.6rem;
+                color: black;
+                margin: auto auto 0.5rem 0.5rem
+            }
+        }
     }
-    h2 {
-        font-family: Poppins;
-        font-size: 1.2rem;
-        font-weight: 100;
+
+    .name-area {
+        h1 {
+            font-size: 1.1rem !important;
+            color: orangered;
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
     }
-}
+    .text-area {
+        p {
 
-.description {
-    order: 4;
-    font-size: 1rem;
-    font-weight: 100;
-    padding: 1rem;
-}
-
-.photo-area {
-    order: 1;
-    width: 60%;
-    margin: 0 auto 0 auto;
-}
-
-.some-data {
-    order: 3;
-    display: flex;
-    flex-flow: row wrap;
-    span {
-        display: block;
-        padding: 0.5em;
-        border-radius: 4px;
-        background-color: rgb(255, 69, 0, 0.4);
+        }
     }
-}
-
-.resume-button {
-    order: 5;
-    width: 60%;
-    background-color: cadetblue;
-    padding: 0.6em;
-    border-radius: 6px;
+    .cv-button {
+        text-align: center;
+        padding: 1rem;
+        a {
+            background-color: deepskyblue;
+            padding: 0.5em;
+            border-radius: 6px;
+        }
+    }
 }
 /* -------------------------------------------------------------------------- */

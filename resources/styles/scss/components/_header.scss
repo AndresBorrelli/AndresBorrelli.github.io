@@ -1,52 +1,59 @@
 /* -------------------------------------------------------------------------- */
 
-.main-header {
+.main-nav {
+    display: block;
     position: fixed;
+    top: 0px; left: 0px;
     height: 2rem; width: 100%;
-    padding: 0.2rem;
-    border: 1px solid black;
-    .logo-link {
+    .main-nav-logo-box {
+        height: 100%;
+        padding: 4px;
         img {
-            height: 100%;
-            border-radius: 3px;
+            height:inherit;
+            border-radius: 4px;
         }
     }
-    .menu-button-opener, .menu-button-closer {
-        display: block;
+    .main-nav-button {
+        display: none;
+    }
+    .main-nav-button-label {
+        display:block;
         position: absolute;
-        top: 0px; right: 0px;
-        font-size: 1.4rem;
-        padding: 6px;
-        &::before {
-            background-color: white;
-        }
-        &:hover::before {
-            color: orangered;
-        }
+        top: 8px; right: 4px;
+        cursor: pointer;
     }
-    .menu-button-opener { 
-        z-index: 9;
-    }
-    .menu-button-opener::before {
+    .main-nav-button-label::before {
         content: '\2630';
     }
-    .menu-button-opener:focus + .main-nav {
-        left: 0px !important;
-    }
-    .menu-button-closer {
-        z-index: 99;
-        
-    }
-    .menu-button-closer:before {
+    .main-nav-button:checked + .main-nav-button-label::before {
         content: '\2715';
     }
-    .main-nav {
+
+    .main-nav-button:checked ~ .main-nav-content {
+        height: 100dvh;
+    }
+
+    .main-nav-content {
         display: block;
-        position: absolute;
-        height: 100dvh; width: 100%;
-        top: 0px; left: -101%;
+        height: 0px;
         transition: 250ms ease;
-        background-color: #FFFFFF;
+        overflow: hidden;
+        list-style-type: none;
+        li {
+            display: block;
+            background-color:white;
+            box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+            border-radius: 10px 0px 0px 10px;
+            margin: 1rem 0px 0px 1rem ;
+            padding: 0px 0px 0px 1rem;
+            a {
+                font-size: 1.4rem;
+                line-height: 2.2rem;
+                color: #0f0f0f;
+
+
+            }
+        }
     }
 }
 
