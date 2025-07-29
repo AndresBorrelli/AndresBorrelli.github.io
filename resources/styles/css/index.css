@@ -185,6 +185,7 @@ html {
   height: 2rem;
   width: 100%;
   background-color: var(--main-nav-bgcolor);
+  z-index: 9;
 }
 .main-nav .main-nav-logo-box {
   height: 100%;
