@@ -1,0 +1,21 @@
+/* -------------------------------------------------------------------------- */
+/* L A Y O U T   P R I N C I P A L
+/* -------------------------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+    background-color: var(--main-bgcolor);
+    color: var(--main-color);
+}
+/* -------------------------------------------------------------------------- */
+.main-container {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    section {
+        align-self: stretch;
+        min-height: 100dvh; width: 100%;
+        padding: 3rem 0.5rem 0.5rem 0.5rem;
+    }
+}
+/* -------------------------------------------------------------------------- */

@@ -1,50 +1,90 @@
 /* -------------------------------------------------------------------------- */
+/* H O M E   S E C T I O N                                                    */
+/* -------------------------------------------------------------------------- */
 .home-section {
-    display: flex !important;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    .photo-area {
-        position: relative;
-        .photo-box {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 
-        }
-        .some-data-box {
-            position: absolute;
-            bottom: 0px;
-            vertical-align: middle;
-            a {
-                display: flex;
-                align-items: center;
-                gap: 0.2rem;
-                font-size: 0.6rem;
-                color: black;
-                margin: auto auto 0.5rem 0.5rem
+.photo-panel, name-panel, text-panel, cv-download-button-panel {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-panel {
+    position: relative;
+    height: 40%;
+    justify-content: center; /* Centra horizontalmente la imagen dentro de .a */
+    align-items: center;   /* Centra verticalmente la imagen dentro de .a */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    .photo-area {
+        display: flex;
+        height: 100; width: 100%;
+        .photo-frame {
+            img {
+                max-height: 100%;
+                height: 100%;
+
             }
         }
     }
-
-    .name-area {
-        h1 {
-            font-size: 1.1rem !important;
-            color: orangered;
-        }
-        h2 {
-            font-size: 1.2rem;
-        }
-    }
-    .text-area {
-        p {
-
-        }
-    }
-    .cv-button {
-        text-align: center;
-        padding: 1rem;
+    .some-data-area {
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0.2rem;
         a {
-            background-color: deepskyblue;
-            padding: 0.5em;
-            border-radius: 6px;
+            font-size: 0.8rem;
+            padding: 0.4em;
+            border: 1px solid orangered;
+            background-color: rgba(255, 255, 255, .5);
+            border-radius: 5px;
         }
     }
 }
+
+.name-panel {
+    height: 10%;
+    h1, h2 {
+        font-family: Poppins;
+        font-size: 1.1rem;
+        font-weight: 100;
+        color: var(--name-color);
+    }
+    h2 {
+        color: var(--prof-color);
+        font-size: 1.2rem;
+    }
+}
+
+.text-panel {
+    height: 30%;
+}
+
+.cv-download-button-panel {
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    a {
+        display: block;
+        color: var(--download-cv-button-color);
+        background-color: var(--download-cv-button-bgcolor);
+        padding: 0.5em;
+        &:hover {
+            color: var(--download-cv-button-color-hover);
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+}
+
 /* -------------------------------------------------------------------------- */

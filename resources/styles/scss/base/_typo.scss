@@ -39,18 +39,9 @@ html {
     }
 }
 /* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
 /* Teléfonos pequeños en orientación horizontal (Landscape) */
 /* Anchos entre ~320px y 480px, pero en horizontal */
 @media (max-width: 767px) and (orientation: landscape) {
-    body {
-        padding: 10px; /* Reducir padding para aprovechar el ancho */
-    }
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Más columnas posibles si el contenido es apto */
-        gap: 15px;
-    }
-    /* Podrías reducir ligeramente el font-size aquí para que quepa más texto en pantalla */
     html {
         font-size: 15px;
     }

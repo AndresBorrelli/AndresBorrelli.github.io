@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./resources/styles/css/index.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="./resources/styles/css/index.css"></link>
     <script src="./resources/scripts/index.js"></script>
 </head>
 
@@ -17,26 +17,40 @@
         <input type="checkbox" id="main-nav-button" class="main-nav-button"/>
         <label class="main-nav-button-label" for="main-nav-button"></label>
         <ul id="main-nav-content" class="main-nav-content">
-            <li><a href="#home-section" class="main-nav-item">Inicio</a></li>
-            <li><a href="#about-me-section" class="main-nav-item">Sobre mí</a></li>
-            <li><a href="#job-exp-section" class="main-nav-item">Experiencia laboral</a></li>
-            <li><a href="#articles-section" class="main-nav-item">Artículos</a></li>
-            <li><a href="#contact-section" class="main-nav-item">Contacto</a></li>
+            <li><a href="#_home-section" class="main-nav-item">Inicio</a></li>
+            <li><a href="#_about-me-section" class="main-nav-item">Sobre mí</a></li>
+            <li><a href="#_job-exp-section" class="main-nav-item">Experiencia laboral</a></li>
+            <li><a href="#_articles-section" class="main-nav-item">Artículos</a></li>
+            <li><a href="#_contact-section" class="main-nav-item">Contacto</a></li>
         </ul>
     </nav>
 
     <div class="main-container">
 
-        <section id="home-section" class="home-section">
-            <h1>Inicio</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quo quisquam deserunt, ab nesciunt dolore praesentium natus quia dignissimos minima, explicabo nulla, magni consectetur aperiam! Voluptates sapiente aut quia velit.</p>
-            <p>Quaerat cumque similique placeat fuga recusandae architecto porro sequi animi nihil rem eaque dolore aut, deserunt vitae explicabo doloremque! Voluptatibus temporibus tenetur sequi rem laboriosam natus quia ut fugit culpa.</p>
-            <p>Cupiditate amet et distinctio blanditiis debitis culpa maiores nulla voluptate excepturi deleniti ipsam fugiat voluptatum quis mollitia consequatur ea similique, porro aliquam, vel minus consequuntur voluptates beatae laboriosam fugit. Veritatis.</p>
-            <p>Quia, voluptatum accusantium incidunt similique amet qui modi ex eligendi repellat odit quod eius. Optio eos sequi eveniet vel minus, soluta inventore voluptas. A quo facere est rem molestiae quisquam.</p>
-
+        <section id="_home-section" class="home-section">
+            <div class="photo-panel">
+                <div class="photo-area">
+                    <div class="photo-frame">
+                        <img src="./resources/images/andresborrelli3.png" alt="Andrés E. Borrelli">
+                    </div>
+                </div>
+                <div class="some-data-area">
+                    <a href="#">Linkedin</a>
+                </div>
+            </div>
+            <div class="name-panel">
+                <h1>Andrés E. Borrelli</h1>
+                <h2>Analista de Sistemas</h2>
+            </div>
+            <div class="text-panel">
+                Arquitecto de Software y Líder Técnico en el Sector Financiero. Especialista en Arquitecturas de Software y Banca Digital con 40+ años de Experiencia.
+            </div>
+            <div class="cv-dowload-button-panel">
+                <a href="./download/cv.pdf">Descargar&nbsp;CV</a>
+            </div>
         </section>
 
-        <section id="about-me-section" class="home-section">
+        <section id="_about-me-section" class="home-section">
             <h1>Sobre mí</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quo quisquam deserunt, ab nesciunt dolore praesentium natus quia dignissimos minima, explicabo nulla, magni consectetur aperiam! Voluptates sapiente aut quia velit.</p>
             <p>Quaerat cumque similique placeat fuga recusandae architecto porro sequi animi nihil rem eaque dolore aut, deserunt vitae explicabo doloremque! Voluptatibus temporibus tenetur sequi rem laboriosam natus quia ut fugit culpa.</p>
@@ -44,7 +58,7 @@
             <p>Quia, voluptatum accusantium incidunt similique amet qui modi ex eligendi repellat odit quod eius. Optio eos sequi eveniet vel minus, soluta inventore voluptas. A quo facere est rem molestiae quisquam.</p>
         </section>
 
-        <section id="job-exp-section" class="home-section">
+        <section id="_job-exp-section" class="home-section">
             <h1>Experiencia laboral</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quo quisquam deserunt, ab nesciunt dolore praesentium natus quia dignissimos minima, explicabo nulla, magni consectetur aperiam! Voluptates sapiente aut quia velit.</p>
             <p>Quaerat cumque similique placeat fuga recusandae architecto porro sequi animi nihil rem eaque dolore aut, deserunt vitae explicabo doloremque! Voluptatibus temporibus tenetur sequi rem laboriosam natus quia ut fugit culpa.</p>
@@ -52,7 +66,7 @@
             <p>Quia, voluptatum accusantium incidunt similique amet qui modi ex eligendi repellat odit quod eius. Optio eos sequi eveniet vel minus, soluta inventore voluptas. A quo facere est rem molestiae quisquam.</p>
         </section>
 
-        <section id="articles-section" class="home-section">
+        <section id="_articles-section" class="home-section">
             <h1>Artículos</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quo quisquam deserunt, ab nesciunt dolore praesentium natus quia dignissimos minima, explicabo nulla, magni consectetur aperiam! Voluptates sapiente aut quia velit.</p>
             <p>Quaerat cumque similique placeat fuga recusandae architecto porro sequi animi nihil rem eaque dolore aut, deserunt vitae explicabo doloremque! Voluptatibus temporibus tenetur sequi rem laboriosam natus quia ut fugit culpa.</p>
@@ -60,12 +74,9 @@
             <p>Quia, voluptatum accusantium incidunt similique amet qui modi ex eligendi repellat odit quod eius. Optio eos sequi eveniet vel minus, soluta inventore voluptas. A quo facere est rem molestiae quisquam.</p>
         </section>
 
-            <section id="contact-section" class="home-section">
+        <section id="_contact-section" class="home-section">
             <h1>Contacto</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quo quisquam deserunt, ab nesciunt dolore praesentium natus quia dignissimos minima, explicabo nulla, magni consectetur aperiam! Voluptates sapiente aut quia velit.</p>
-            <p>Quaerat cumque similique placeat fuga recusandae architecto porro sequi animi nihil rem eaque dolore aut, deserunt vitae explicabo doloremque! Voluptatibus temporibus tenetur sequi rem laboriosam natus quia ut fugit culpa.</p>
-            <p>Cupiditate amet et distinctio blanditiis debitis culpa maiores nulla voluptate excepturi deleniti ipsam fugiat voluptatum quis mollitia consequatur ea similique, porro aliquam, vel minus consequuntur voluptates beatae laboriosam fugit. Veritatis.</p>
-            <p>Quia, voluptatum accusantium incidunt similique amet qui modi ex eligendi repellat odit quod eius. Optio eos sequi eveniet vel minus, soluta inventore voluptas. A quo facere est rem molestiae quisquam.</p>
         </section>
 
     </div>

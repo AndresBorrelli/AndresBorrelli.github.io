@@ -1,25 +1,8 @@
 /* -------------------------------------------------------------------------- */
+@use './base/resets';
 @use './abstracts/variables';
 @use './base/typo';
-@use './base/resets';
+@use './base/layout';
 @use './components/header';
 @use './components/home';
-/* -------------------------------------------------------------------------- */
-html {
-    scroll-behavior: smooth;
-    background-color: var(--main-bgcolor);
-}
-/* -------------------------------------------------------------------------- */
-.main-container {
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    section {
-        align-self: stretch;
-        display: block;
-        min-height: 100dvh; width: 100%;
-        padding: 3rem 0.5rem 0.5rem 0.5rem;
-    }
-}
 /* -------------------------------------------------------------------------- */
