@@ -2,20 +2,18 @@
 /* H O M E   S E C T I O N                                                    */
 /* -------------------------------------------------------------------------- */
 .home-section {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
-
+/*
 .photo-panel, name-panel, text-panel, cv-download-button-panel {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+*/
 .photo-panel {
     position: relative;
     height: 40%;
@@ -23,14 +21,11 @@
     align-items: center;   /* Centra verticalmente la imagen dentro de .a */
     overflow: hidden; /* Asegura que la imagen no se desborde */
     .photo-area {
-        display: flex;
-        height: 100; width: 100%;
-        .photo-frame {
-            img {
-                max-height: 100%;
-                height: 100%;
-
-            }
+        height: 100%; width: 100%;
+        img {
+            display: block;
+            width: 100%;
+            margin: 0 auto 0 auto;;
         }
     }
     .some-data-area {
@@ -49,7 +44,11 @@
 }
 
 .name-panel {
-    height: 10%;
+    height: 20%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: left;    
     h1, h2 {
         font-family: Poppins;
         font-size: 1.1rem;
@@ -66,20 +65,22 @@
     height: 30%;
 }
 
-.cv-download-button-panel {
-    height: 20%;
+.cv-download-panel {
+    height: 10%;
+    display: flex;
     justify-content: center;
     align-items: center;
     a {
-        display: block;
-        color: var(--download-cv-button-color);
+        display: inline-block;
+        padding: 0.5em 1em;
         background-color: var(--download-cv-button-bgcolor);
-        padding: 0.5em;
-        &:hover {
-            color: var(--download-cv-button-color-hover);
-        }
+        color: var(--download-cv-button-color);
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
     }
 }
+
 
 /* -------------------------------------------------------------------------- */
 

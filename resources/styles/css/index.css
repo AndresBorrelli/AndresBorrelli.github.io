@@ -170,6 +170,7 @@ html {
 .main-container section {
   align-self: stretch;
   min-height: 100dvh;
+  max-height: 100dvh;
   width: 100%;
   padding: 3rem 0.5rem 0.5rem 0.5rem;
 }
@@ -268,20 +269,19 @@ html {
 /* H O M E   S E C T I O N                                                    */
 /* -------------------------------------------------------------------------- */
 .home-section {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
+/*
 .photo-panel, name-panel, text-panel, cv-download-button-panel {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+*/
 .photo-panel {
   position: relative;
   height: 40%;
@@ -290,13 +290,13 @@ html {
   overflow: hidden; /* Asegura que la imagen no se desborde */
 }
 .photo-panel .photo-area {
-  display: flex;
-  height: 100;
+  height: 100%;
   width: 100%;
 }
-.photo-panel .photo-area .photo-frame img {
-  max-height: 100%;
-  height: 100%;
+.photo-panel .photo-area img {
+  display: block;
+  width: 100%;
+  margin: 0 auto 0 auto;
 }
 .photo-panel .some-data-area {
   display: block;
@@ -313,7 +313,11 @@ html {
 }
 
 .name-panel {
-  height: 10%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
 }
 .name-panel h1, .name-panel h2 {
   font-family: Poppins;
@@ -330,19 +334,20 @@ html {
   height: 30%;
 }
 
-.cv-download-button-panel {
-  height: 20%;
+.cv-download-panel {
+  height: 10%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.cv-download-button-panel a {
-  display: block;
-  color: var(--download-cv-button-color);
+.cv-download-panel a {
+  display: inline-block;
+  padding: 0.5em 1em;
   background-color: var(--download-cv-button-bgcolor);
-  padding: 0.5em;
-}
-.cv-download-button-panel a:hover {
-  color: var(--download-cv-button-color-hover);
+  color: var(--download-cv-button-color);
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* -------------------------------------------------------------------------- */
