@@ -343,4 +343,50 @@ html {
 }
 
 /* -------------------------------------------------------------------------- */
+@media (min-width: 768px), screen and (orientation: landscape) { /* Se aplica a partir de 768px de ancho */
+  .home-section {
+    grid-template-columns: 50% 50%; /* Dos columnas de 50% de ancho */
+    grid-template-rows: 60% 30% 10%; /* Filas para name-area, text-area, button-area */
+  }
+  .home-section .photo-panel {
+    grid-column: 2/3; /* Ocupa la segunda columna (derecha) */
+    grid-row: 1/4; /* Ocupa desde la primera hasta la última fila */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  .home-section .photo-panel img {
+    height: auto !important;
+    width: 100% !important;
+  }
+  .home-section .name-panel {
+    grid-column: 1/2; /* Ocupa la primera columna (izquierda) */
+    grid-row: 1/2; /* Ocupa la primera fila */
+    justify-content: flex;
+    gap: 0px;
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    text-align: left;
+    padding-left: 2rem; /* Espacio adicional a la izquierda */
+  }
+  .home-section .name-panel h1, .home-section .name-panel h2 {
+    font-size: 1.8rem;
+  }
+  .home-section .name-panel h2 {
+    font-size: 2rem;
+  }
+  .home-section .text-panel {
+    grid-column: 1/2; /* Ocupa la primera columna (izquierda) */
+    grid-row: 2/3; /* Ocupa la segunda fila */
+    justify-content: center;
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    text-align: left;
+  }
+  .home-section .button-panel {
+    grid-column: 1/2; /* Ocupa la primera columna (izquierda) */
+    grid-row: 3/4; /* Ocupa la tercera fila */
+    justify-content: flex-start; /* Alinea el botón a la izquierda */
+  }
+}
+/* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
