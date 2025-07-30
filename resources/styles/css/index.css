@@ -12,6 +12,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: 0px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -63,6 +64,7 @@ textarea:not([rows]) {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -170,7 +172,6 @@ html {
 .main-container section {
   align-self: stretch;
   min-height: 100dvh;
-  max-height: 100dvh;
   width: 100%;
   padding: 3rem 0.5rem 0.5rem 0.5rem;
 }
@@ -270,87 +271,76 @@ html {
 /* H O M E   S E C T I O N                                                    */
 /* -------------------------------------------------------------------------- */
 .home-section {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-/*
-.photo-panel, name-panel, text-panel, cv-download-button-panel {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*/
-.photo-panel {
-  position: relative;
-  height: 40%;
-  justify-content: center; /* Centra horizontalmente la imagen dentro de .a */
-  align-items: center; /* Centra verticalmente la imagen dentro de .a */
-  overflow: hidden; /* Asegura que la imagen no se desborde */
-}
-.photo-panel .photo-area {
+  display: grid;
+  grid-template-rows: 40% 20% 30% 10%;
+  grid-template-columns: 100%;
   height: 100%;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
-.photo-panel .photo-area img {
-  display: block;
+.home-section .photo-panel {
+  height: 100%;
   width: 100%;
-  margin: 0 auto 0 auto;
+  position: relative;
 }
-.photo-panel .some-data-area {
-  display: block;
+.home-section .photo-panel .photo-area {
+  height: 100%;
   width: 100%;
+  background-image: url(../../images/home/photo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.home-section .photo-panel .photo-area img {
+  height: 100%;
+  margin: 0px auto 0px auto;
+}
+.home-section .photo-panel .some-data-area {
+  display: flex;
+  justify-content: flex-end;
   position: absolute;
-  bottom: 0.2rem;
+  width: 100%;
+  bottom: 0.5rem;
+  right: 0.5rem;
 }
-.photo-panel .some-data-area a {
+.home-section .photo-panel .some-data-area a {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
   font-size: 0.8rem;
+  line-height: 26px;
   padding: 0.4em;
   border: 1px solid orangered;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
 }
-
-.name-panel {
-  height: 20%;
+.home-section .name-panel {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
-  align-items: left;
+  gap: 0.5rem;
 }
-.name-panel h1, .name-panel h2 {
+.home-section .name-panel h1, .home-section .name-panel h2 {
   font-family: Poppins;
-  font-size: 1.1rem;
-  font-weight: 100;
-  color: var(--name-color);
-}
-.name-panel h2 {
-  color: var(--prof-color);
   font-size: 1.2rem;
+  font-weight: 100;
+  color: orangered;
 }
-
-.text-panel {
-  height: 30%;
+.home-section .name-panel h2 {
+  font-size: 1rem;
+  color: var(--main-color);
 }
-
-.cv-download-panel {
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.home-section .cv-download-panel {
+  text-align: center;
+  vertical-align: middle;
 }
-.cv-download-panel a {
-  display: inline-block;
-  padding: 0.5em 1em;
+.home-section .cv-download-panel a {
+  font-size: 0.8em;
+  padding: 0.4rem;
   background-color: var(--download-cv-button-bgcolor);
   color: var(--download-cv-button-color);
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  border-radius: 6px;
 }
 
-/* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */

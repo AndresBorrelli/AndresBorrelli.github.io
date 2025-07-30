@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0;    
     padding: 0;
+    outline: 0px;
 }
 /* -------------------------------------------------------------------------- */
 html {
@@ -41,5 +42,6 @@ textarea:not([rows]) { min-height: 10em; }
 a { 
     text-decoration: none;
     cursor: pointer;
+    color: inherit;
 }
 /* -------------------------------------------------------------------------- */
