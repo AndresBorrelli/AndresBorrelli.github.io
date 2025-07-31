@@ -1,0 +1,23 @@
+/* -------------------------------------------------------------------------- */
+/* T E C H   S K I L LS   S E C T I O N                                       */
+/* -------------------------------------------------------------------------- */
+
+.tech-skills-section {
+
+    .content-area {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1rem;
+        gap: 2rem;
+        .tech-skills-card {
+            flex-basis: 100% 0 0;
+            padding: 1rem;
+            border-radius: 6px;
+            background-color: white;
+            ul {
+                padding: .5rem;
+            }
+        }
+    }
+}
+/* -------------------------------------------------------------------------- */

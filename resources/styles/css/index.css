@@ -274,7 +274,8 @@ html {
   display: grid;
   grid-template-rows: 40% 20% 30% 10%;
   grid-template-columns: 100%;
-  height: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
   width: 100%;
   max-width: 100%;
   overflow: hidden;
@@ -322,13 +323,16 @@ html {
 }
 .home-section .name-panel h1, .home-section .name-panel h2 {
   font-family: Poppins;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 100;
   color: orangered;
 }
 .home-section .name-panel h2 {
-  font-size: 1rem;
+  font-size: 1.8rem;
   color: var(--main-color);
+}
+.home-section .text-panel {
+  padding: 2rem;
 }
 .home-section .cv-download-panel {
   text-align: center;
@@ -345,6 +349,7 @@ html {
 /* -------------------------------------------------------------------------- */
 @media (min-width: 768px), screen and (orientation: landscape) { /* Se aplica a partir de 768px de ancho */
   .home-section {
+    padding: 0px !important;
     grid-template-columns: 50% 50%; /* Dos columnas de 50% de ancho */
     grid-template-rows: 60% 30% 10%; /* Filas para name-area, text-area, button-area */
   }
@@ -353,8 +358,8 @@ html {
     grid-row: 1/4; /* Ocupa desde la primera hasta la última fila */
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    align-items: end;
+    background-position: bottom;
   }
   .home-section .photo-panel img {
     height: auto !important;
@@ -370,7 +375,7 @@ html {
     padding-left: 2rem; /* Espacio adicional a la izquierda */
   }
   .home-section .name-panel h1, .home-section .name-panel h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
   .home-section .name-panel h2 {
     font-size: 2rem;
@@ -388,5 +393,36 @@ html {
     justify-content: flex-start; /* Alinea el botón a la izquierda */
   }
 }
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* A B O U T   M E   S E C T I O N                                            */
+/* -------------------------------------------------------------------------- */
+about-me-section .content-area {
+  padding: 2rem;
+}
+about-me-section .content-area p {
+  padding-bottom: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/* T E C H   S K I L LS   S E C T I O N                                       */
+/* -------------------------------------------------------------------------- */
+.tech-skills-section .content-area {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1rem;
+  gap: 2rem;
+}
+.tech-skills-section .content-area .tech-skills-card {
+  flex-basis: 100% 0 0;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: white;
+}
+.tech-skills-section .content-area .tech-skills-card ul {
+  padding: 0.5rem;
+}
+
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
