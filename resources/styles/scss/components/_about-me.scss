@@ -1,12 +1,9 @@
 /* -------------------------------------------------------------------------- */
 /* A B O U T   M E   S E C T I O N                                            */
 /* -------------------------------------------------------------------------- */
-about-me-section {
-    .content-area {
-        padding: 2rem;
-        p {
-            padding-bottom: 1rem;
-        }
-    }
+.about-me-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
 }
 /* -------------------------------------------------------------------------- */

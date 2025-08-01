@@ -202,12 +202,13 @@ html {
 .main-nav .main-nav-button-label {
   display: block;
   position: absolute;
-  top: 8px;
+  top: 0px;
   right: 4px;
   cursor: pointer;
 }
 .main-nav .main-nav-button-label::before {
   content: "☰";
+  font-size: 1.8rem;
 }
 .main-nav .main-nav-button:checked + .main-nav-button-label::before {
   content: "✕";
@@ -394,14 +395,22 @@ html {
   }
 }
 /* -------------------------------------------------------------------------- */
+@media (max-width: 76px), screen and (orientation: landscape) {
+  .home-section {
+    grid-template-rows: 40% 50% 10% !important;
+  }
+  .home-section .name-panel {
+    align-items: stretch;
+  }
+}
+/* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /* A B O U T   M E   S E C T I O N                                            */
 /* -------------------------------------------------------------------------- */
-about-me-section .content-area {
-  padding: 2rem;
-}
-about-me-section .content-area p {
-  padding-bottom: 1rem;
+.about-me-section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
 }
 
 /* -------------------------------------------------------------------------- */

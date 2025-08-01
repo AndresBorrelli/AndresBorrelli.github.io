@@ -1,0 +1,40 @@
+Tengo el siguiente HTML pero quiero aislar cada una de las secciones en un archivo aparte y cargarlo a medida que el usuario vaya haciendo scroll en la pagina. Podrás darme el coódigo javascript necesario?
+
+    <section id="home">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, animi. Officia perspiciatis sunt hic nisi dignissimos repudiandae at, nobis voluptas sint repellat omnis, aliquam explicabo recusandae! Dicta ullam laboriosam aperiam!</p>
+        <p>Tempore ex nostrum deserunt modi voluptatibus nihil assumenda perferendis libero magnam commodi. Perferendis temporibus explicabo nisi maiores ad iste sunt corporis, asperiores ut possimus harum iure exercitationem accusamus iusto accusantium.</p>
+        <p>At omnis voluptate cumque sit possimus assumenda nesciunt? Veritatis ex aliquid accusantium impedit vero deleniti minus ab mollitia, nesciunt nemo error laborum nostrum vel, magni harum placeat culpa adipisci alias?</p>
+        <p>Distinctio rerum tenetur, natus voluptatum enim quam modi animi nostrum fugiat saepe! Facilis veritatis similique eos voluptatum laudantium, aut explicabo ad, nulla minus ipsam delectus exercitationem, atque debitis! Accusamus, ipsam.</p>
+    </section>
+
+    <section id="about-me">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, animi. Officia perspiciatis sunt hic nisi dignissimos repudiandae at, nobis voluptas sint repellat omnis, aliquam explicabo recusandae! Dicta ullam laboriosam aperiam!</p>
+        <p>Tempore ex nostrum deserunt modi voluptatibus nihil assumenda perferendis libero magnam commodi. Perferendis temporibus explicabo nisi maiores ad iste sunt corporis, asperiores ut possimus harum iure exercitationem accusamus iusto accusantium.</p>
+        <p>At omnis voluptate cumque sit possimus assumenda nesciunt? Veritatis ex aliquid accusantium impedit vero deleniti minus ab mollitia, nesciunt nemo error laborum nostrum vel, magni harum placeat culpa adipisci alias?</p>
+        <p>Distinctio rerum tenetur, natus voluptatum enim quam modi animi nostrum fugiat saepe! Facilis veritatis similique eos voluptatum laudantium, aut explicabo ad, nulla minus ipsam delectus exercitationem, atque debitis! Accusamus, ipsam.</p>
+    </section>
+
+    <section id="skills">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, animi. Officia perspiciatis sunt hic nisi dignissimos repudiandae at, nobis voluptas sint repellat omnis, aliquam explicabo recusandae! Dicta ullam laboriosam aperiam!</p>
+        <p>Tempore ex nostrum deserunt modi voluptatibus nihil assumenda perferendis libero magnam commodi. Perferendis temporibus explicabo nisi maiores ad iste sunt corporis, asperiores ut possimus harum iure exercitationem accusamus iusto accusantium.</p>
+        <p>At omnis voluptate cumque sit possimus assumenda nesciunt? Veritatis ex aliquid accusantium impedit vero deleniti minus ab mollitia, nesciunt nemo error laborum nostrum vel, magni harum placeat culpa adipisci alias?</p>
+        <p>Distinctio rerum tenetur, natus voluptatum enim quam modi animi nostrum fugiat saepe! Facilis veritatis similique eos voluptatum laudantium, aut explicabo ad, nulla minus ipsam delectus exercitationem, atque debitis! Accusamus, ipsam.</p>
+    </section>
+
+    <section id="jobs">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, animi. Officia perspiciatis sunt hic nisi dignissimos repudiandae at, nobis voluptas sint repellat omnis, aliquam explicabo recusandae! Dicta ullam laboriosam aperiam!</p>
+        <p>Tempore ex nostrum deserunt modi voluptatibus nihil assumenda perferendis libero magnam commodi. Perferendis temporibus explicabo nisi maiores ad iste sunt corporis, asperiores ut possimus harum iure exercitationem accusamus iusto accusantium.</p>
+        <p>At omnis voluptate cumque sit possimus assumenda nesciunt? Veritatis ex aliquid accusantium impedit vero deleniti minus ab mollitia, nesciunt nemo error laborum nostrum vel, magni harum placeat culpa adipisci alias?</p>
+        <p>Distinctio rerum tenetur, natus voluptatum enim quam modi animi nostrum fugiat saepe! Facilis veritatis similique eos voluptatum laudantium, aut explicabo ad, nulla minus ipsam delectus exercitationem, atque debitis! Accusamus, ipsam.</p>
+    </section>
+
+    <section id="contacts">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, animi. Officia perspiciatis sunt hic nisi dignissimos repudiandae at, nobis voluptas sint repellat omnis, aliquam explicabo recusandae! Dicta ullam laboriosam aperiam!</p>
+        <p>Tempore ex nostrum deserunt modi voluptatibus nihil assumenda perferendis libero magnam commodi. Perferendis temporibus explicabo nisi maiores ad iste sunt corporis, asperiores ut possimus harum iure exercitationem accusamus iusto accusantium.</p>
+        <p>At omnis voluptate cumque sit possimus assumenda nesciunt? Veritatis ex aliquid accusantium impedit vero deleniti minus ab mollitia, nesciunt nemo error laborum nostrum vel, magni harum placeat culpa adipisci alias?</p>
+        <p>Distinctio rerum tenetur, natus voluptatum enim quam modi animi nostrum fugiat saepe! Facilis veritatis similique eos voluptatum laudantium, aut explicabo ad, nulla minus ipsam delectus exercitationem, atque debitis! Accusamus, ipsam.</p>
+    </section>
+
+</main>
+
+//------------------------------------------------------------------------------

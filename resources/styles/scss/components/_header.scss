@@ -21,11 +21,12 @@
     .main-nav-button-label {
         display:block;
         position: absolute;
-        top: 8px; right: 4px;
+        top: 0px; right: 4px;
         cursor: pointer;
     }
     .main-nav-button-label::before {
         content: '\2630';
+        font-size: 1.8rem;
     }
     .main-nav-button:checked + .main-nav-button-label::before {
         content: '\2715';
