@@ -1,0 +1,45 @@
+[
+  {
+    "categoria": "Arquitectura y Diseño",
+    "habilidades": [
+      "Arquitecturas Orientadas a Servicios (SOA)",
+      "Microservicios",
+      "Diseño y Modelado (UML)",
+      "APIs RESTful, SOAP"
+    ]
+  },
+  {
+    "categoria": "Desarrollo y Lenguajes",
+    "habilidades": [
+      "C# (Desktop y Web)",
+      "JavaScript, React.js, HTML, CSS, SASS",
+      "COBOL (CICS, COBOL/400)",
+      "RPG/400"
+    ]
+  },
+  {
+    "categoria": "Bases de Datos",
+    "habilidades": [
+      "Microsoft SQL Server, Oracle, Sybase",
+      "PostgreSQL (AWS AuroraDB)",
+      "DB2, DB2/400"
+    ]
+  },
+  {
+    "categoria": "Gestión de Infraestructura",
+    "habilidades": [
+      "Instalaciones On-premise",
+      "Cloud (AWS - EC2, S3, IAM, Aurora DB, etc.)",
+      "Infraestructuras Híbridas"
+    ]
+  },
+  {
+    "categoria": "Metodologías y Herramientas",
+    "habilidades": [
+      "Metodologías Ágiles, UML, Git",
+      "ClearQuest, ClearCase, SoapUI",
+      "JMeter, Postman",
+      "Visual Studio 2022, VSCode, Eclipse"
+    ]
+  }
+]
