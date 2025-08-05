@@ -1,3 +1,21 @@
-h2 {
-    color: red;
+/* -------------------------------------------------------------------------- */
+#hard-skills-section {
+    display: flex !important;
+    flex-flow: column nowrap;
+    gap: .5rem;
 }
+
+.hard-skills-card {
+    border-radius: 6px;
+    background-color: var(--card-bg-color);
+    padding: .5rem;
+    h3 {
+        color: var(--card-title-color)
+    }
+    ul {
+        padding: 1rem 0 0 2rem;
+        list-style-type:circle;
+    }
+}
+
+/* -------------------------------------------------------------------------- */

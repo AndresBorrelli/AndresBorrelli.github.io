@@ -2,19 +2,14 @@
 /* V A R I A B L E S                                                          */
 /* -------------------------------------------------------------------------- */
 :root {
-    --main-bgcolor: rgba(239, 240, 235);
-    --main-color: rgba(93, 64, 56);
-    --main-nav-bgcolor: rgba(239, 240, 235);
-    --main-nav-color: rgba(167, 154, 139);
-    --main-nav-color-hover: red;
-
-    --download-cv-button-bgcolor: rgba(254, 53, 74);
-    --download-cv-button-color: rgba(239, 240, 235);
-    --download-cv-button-color-hover: rgba(255, 255, 255);
-
-    --name-color: rgba(254, 53, 74 );
-    --prof-color: rgba(93, 54, 56);
-
-
+    --main-bg-color: #EEF2FE;
+    --main-font-color: #0e0e0e;
+    --section-title-color: green;
+    --section-subtitle-color: blue;
+    --card-bg-color: #fff;
+    --card-title-color: #0f0f0f;
+    
+    --loader-color-1: #fff;
+    --loader-color-2: #ff4500;
 }
 /* -------------------------------------------------------------------------- */

@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-/* T I P O G R A F I A                                                        */
-/* -------------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 /* -------------------------------------------------------------------------- */
@@ -72,93 +69,38 @@ a {
 /* V A R I A B L E S                                                          */
 /* -------------------------------------------------------------------------- */
 :root {
-  --main-bgcolor: rgba(239, 240, 235);
-  --main-color: rgba(93, 64, 56);
-  --main-nav-bgcolor: rgba(239, 240, 235);
-  --main-nav-color: rgba(167, 154, 139);
-  --main-nav-color-hover: red;
-  --download-cv-button-bgcolor: rgba(254, 53, 74);
-  --download-cv-button-color: rgba(239, 240, 235);
-  --download-cv-button-color-hover: rgba(255, 255, 255);
-  --name-color: rgba(254, 53, 74 );
-  --prof-color: rgba(93, 54, 56);
+  --main-bg-color: #EEF2FE;
+  --main-font-color: #0e0e0e;
+  --section-title-color: green;
+  --section-subtitle-color: blue;
+  --card-bg-color: #fff;
+  --card-title-color: #0f0f0f;
+  --loader-color-1: #fff;
+  --loader-color-2: #ff4500;
 }
 
-/* -------------------------------------------------------------------------- */
-/* -------------------------------------------------------------------------- */
-html {
-  font-family: Comfortaa, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* -------------------------------------------------------------------------- */
-/* Teléfonos grandes / Tablets pequeñas (Portrait) */
-@media (min-width: 481px) {
-  html {
-    font-size: 17px;
-  }
-}
-/* -------------------------------------------------------------------------- */
-/* Tablets (Portrait) / Laptops pequeños */
-@media (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
-}
-/* -------------------------------------------------------------------------- */
-/* Laptops / Desktops Medianos */
-@media (min-width: 1024px) {
-  html {
-    font-size: 18px;
-  }
-}
-/* -------------------------------------------------------------------------- */
-/* Monitores Grandes */
-@media (min-width: 1280px) {
-  html {
-    font-size: 19px;
-  }
-}
-/* -------------------------------------------------------------------------- */
-/* Teléfonos pequeños en orientación horizontal (Landscape) */
-/* Anchos entre ~320px y 480px, pero en horizontal */
-@media (max-width: 767px) and (orientation: landscape) {
-  html {
-    font-size: 15px;
-  }
-}
-/* -------------------------------------------------------------------------- */
-/* Tablets en orientación horizontal (Landscape) */
-/* Anchos entre 768px y 1023px, pero en horizontal */
-@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr); /* Podrían caber 3 columnas cómodamente */
-  }
-  /* Ajustes específicos para layouts de tablet en horizontal, como formularios */
-  .form-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-/* -------------------------------------------------------------------------- */
-/* Ajustes generales de interacción (si usas hover/pointer como te comenté antes) */
-/* Dispositivos con pantalla táctil */
-@media (hover: none) and (pointer: coarse) {
-  /* Por ejemplo, hacer los botones más grandes */
-  button, input[type=submit] {
-    padding: 15px 20px;
-  }
-}
 /* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /* L A Y O U T   P R I N C I P A L                                            */
 /* -------------------------------------------------------------------------- */
 html {
+  font-family: Comfortaa, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.6;
+  color: var(--main-font-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: Poppins, sans-serif;
+  font-weight: 100;
+}
+
+/* -------------------------------------------------------------------------- */
+html {
   scroll-behavior: smooth;
-  background-color: whitesmoke;
+  background-color: var(--main-bg-color);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -167,34 +109,42 @@ main {
   width: 100%;
 }
 main .main-section {
+  display: block;
   min-height: 100dvh;
   width: 100%;
   padding: 4rem 0.5rem 0.5rem 0.5rem;
 }
 main .main-section .section-title {
   font-family: Poppins;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 100;
+  margin-bottom: 1rem;
+  color: var(--section-title-color);
+}
+main .main-section .section-subtitle {
+  font-family: Poppins;
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: var(--section-subtitle-color);
+}
+main .main-section .section-content {
+  padding-left: 1rem;
+}
+main .main-section.loaded .loader {
+  display: none;
 }
 
 /* -------------------------------------------------------------------------- */
-.loader-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50dvh;
-  width: 100%;
-}
-
 .loader {
   width: 48px;
   height: 48px;
-  border: 5px solid #FFF;
-  border-bottom-color: #FF3D00;
+  border: 5px solid var(--loader-color-1);
+  border-bottom-color: var(--loader-color-2);
   border-radius: 50%;
   display: inline-block;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
+  margin: calc(50% - 24px) 0 0 calc(50% - 24px);
 }
 
 @keyframes rotation {
@@ -211,7 +161,7 @@ main .main-section .section-title {
   display: block;
   height: 3rem;
   width: 100%;
-  background-color: whitesmoke;
+  background-color: var(--main-bg-color);
   padding: 0.5rem;
 }
 .main-nav .logo-link {

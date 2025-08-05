@@ -1,7 +1,14 @@
-
-.job-exp-section {
-    h2 {
-        color: red;
+/* -------------------------------------------------------------------------- */
+#_prof-exp-section {
+    .section-content {
+        display: flex;
+        flex-flow: column nowrap;
+        div {
+            ul {
+                padding: 1rem 0 0 2rem;
+                list-style-type:circle;
+            }
+        }
     }
-    
 }
+/* -------------------------------------------------------------------------- */
