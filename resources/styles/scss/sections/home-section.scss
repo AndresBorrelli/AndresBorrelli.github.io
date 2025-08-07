@@ -4,7 +4,7 @@
     .section-content {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 40% 20% 30% 10%;
+        grid-template-rows: 40% 15% 30% 15%;
         gap: .5rem;
         height: calc(100dvh - 4rem); 
         width: 100%;
@@ -13,7 +13,8 @@
             .photo-area {
                 height: 100%;
                 img {
-
+                    height: 100%;
+                    margin: 0 auto;
                 }
             }
             .misc-area {
@@ -25,11 +26,17 @@
                 justify-content: flex-start;
                 align-items: flex-end;
                 gap: .5rem;
-                padding: .5rem;
+                padding: .3rem;
                 a {
-                    padding: .2rem;
-                    border: 1px solid white; border-radius: .2rem;
+                    display: flex;
+                    align-items: center;
+                    padding: 0 1rem;
+                    font-size: .6rem;
+                    border: 1px solid white; border-radius: .3rem;
                     background-color: rgb(255, 255, 255, .5);
+                    span {
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }
@@ -39,12 +46,11 @@
             justify-content: center; 
             align-items: flex-start; 
             h1 {
-                font-size: 1.8rem;
-                line-height: 2.2rem;
-                            }
+                font-size: 1.4rem;
+                color: var(--striking-font-color);
+            }
             h2 {
-                font-size: 2rem;
-                color: red;
+                font-size: 1.6rem;
             }
         }
         .text-panel {

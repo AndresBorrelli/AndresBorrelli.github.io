@@ -5,7 +5,7 @@
 #_home-section .section-content {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 40% 20% 30% 10%;
+  grid-template-rows: 40% 15% 30% 15%;
   gap: 0.5rem;
   height: calc(100dvh - 4rem);
   width: 100%;
@@ -15,6 +15,10 @@
 }
 #_home-section .section-content .deco-panel .photo-area {
   height: 100%;
+}
+#_home-section .section-content .deco-panel .photo-area img {
+  height: 100%;
+  margin: 0 auto;
 }
 #_home-section .section-content .deco-panel .misc-area {
   position: absolute;
@@ -26,13 +30,19 @@
   justify-content: flex-start;
   align-items: flex-end;
   gap: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.3rem;
 }
 #_home-section .section-content .deco-panel .misc-area a {
-  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.6rem;
   border: 1px solid white;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   background-color: rgba(255, 255, 255, 0.5);
+}
+#_home-section .section-content .deco-panel .misc-area a span {
+  font-size: 1.5rem;
 }
 #_home-section .section-content .name-panel {
   display: flex;
@@ -41,12 +51,11 @@
   align-items: flex-start;
 }
 #_home-section .section-content .name-panel h1 {
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+  font-size: 1.4rem;
+  color: var(--striking-font-color);
 }
 #_home-section .section-content .name-panel h2 {
-  font-size: 2rem;
-  color: red;
+  font-size: 1.6rem;
 }
 #_home-section .section-content .links-panel {
   display: flex;
