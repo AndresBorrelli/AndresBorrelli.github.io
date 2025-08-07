@@ -74,8 +74,8 @@ a {
   --section-title-color: #101010;
   --section-subtitle-color: #313131;
   --section-content-title-color: #3f3f3f;
-  --main-bg-color: #EEF2FE;
-  --main-nav-bg-color: #EEF2FE;
+  --main-bg-color: #f5f5f5;
+  --main-nav-bg-color: #fff;
   --card-bg-color: #fff;
   --card-title-color: #313131;
   --loader-color-1: #fff;
@@ -115,7 +115,6 @@ main {
 }
 main .main-section {
   display: block;
-  height: 100dvh;
   min-height: 100dvh;
   width: 100%;
   padding: 4rem 0.5rem 0.5rem 0.5rem;
@@ -126,6 +125,7 @@ main .main-section .section-title {
   font-weight: 100;
   line-height: 3rem;
   color: var(--section-title-color);
+  border-top: 1px solid var(--main-font-color);
 }
 main .main-section .section-subtitle {
   font-family: Poppins;
@@ -151,7 +151,7 @@ main .main-section.placeholder .loader {
   display: block;
   height: 3rem;
   width: 100%;
-  background-color: var(--main-nav-bg-color);
+  background-color: var(--main-bg-color);
   padding: 0.5rem;
   z-index: 99;
 }
@@ -164,6 +164,9 @@ main .main-section.placeholder .loader {
   width: auto;
   border-radius: 6px;
 }
+.main-nav:has(.main-nav-button:checked) {
+  background-color: var(--main-nav-bg-color);
+}
 .main-nav .main-nav-button {
   display: none;
 }
@@ -171,7 +174,8 @@ main .main-section.placeholder .loader {
   content: "✕";
 }
 .main-nav .main-nav-button:checked ~ ul {
-  left: 0px;
+  height: calc(100dvh - 3rem);
+  padding: 1rem;
 }
 .main-nav .main-nav-button-label {
   position: absolute;
@@ -193,14 +197,15 @@ main .main-section.placeholder .loader {
   flex-flow: column nowrap;
   gap: 1rem;
   position: absolute;
-  height: calc(100dvh - 3rem);
+  height: 0px;
   width: 100%;
   top: 3rem;
-  left: 101%;
-  padding: 1rem;
+  left: 0%;
+  padding: 0px;
   list-style-type: none;
   transition: 250ms ease;
   background-color: var(--main-nav-bg-color);
+  overflow: hidden;
   z-index: 9999;
 }
 .main-nav ul li {
@@ -295,6 +300,10 @@ main .main-section.placeholder .loader {
     font-size: 0.9rem;
     text-transform: capitalize;
     color: var(--main-nav-color);
+  }
+  main {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
   }
 }
 /* -------------------------------------------------------------------------- */
