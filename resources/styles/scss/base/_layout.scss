@@ -66,6 +66,7 @@ main {
     height: 3rem; width: 100%;
     background-color: var(--main-nav-bg-color);
     padding: .5rem;
+    z-index: 99;
     .logo-link {
         display: block;
         height: 100%;

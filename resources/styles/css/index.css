@@ -153,6 +153,7 @@ main .main-section.placeholder .loader {
   width: 100%;
   background-color: var(--main-nav-bg-color);
   padding: 0.5rem;
+  z-index: 99;
 }
 .main-nav .logo-link {
   display: block;
