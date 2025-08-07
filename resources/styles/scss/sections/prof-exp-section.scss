@@ -2,11 +2,15 @@
 #_prof-exp-section {
     .section-content {
         display: flex;
-        flex-flow: column nowrap;
-        div {
+        flex-wrap: wrap;
+        gap: .5rem;
+        .job-exp-card {
+            .job-exp-header {
+                
+            }
             ul {
-                padding: 1rem 0 0 2rem;
-                list-style-type:circle;
+                list-style-type: circle;
+                padding-left: 1rem;
             }
         }
     }

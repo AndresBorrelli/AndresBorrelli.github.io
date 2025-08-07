@@ -1,21 +1,19 @@
 /* -------------------------------------------------------------------------- */
-#hard-skills-section {
-  display: flex !important;
-  flex-flow: column nowrap;
+#_hard-skills-section .section-content {
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
 }
-
-.hard-skills-card {
-  border-radius: 6px;
-  background-color: var(--card-bg-color);
-  padding: 0.5rem;
+#_hard-skills-section .section-content .hard-skills-card {
+  flex-grow: 1;
+  flex-basis: 100%;
 }
-.hard-skills-card h3 {
-  color: var(--card-title-color);
+#_hard-skills-section .section-content .hard-skills-card h3 {
+  color: var(--section-subtitle-color);
 }
-.hard-skills-card ul {
-  padding: 1rem 0 0 2rem;
+#_hard-skills-section .section-content .hard-skills-card ul {
   list-style-type: circle;
+  padding: 1rem;
 }
 
 /* -------------------------------------------------------------------------- */

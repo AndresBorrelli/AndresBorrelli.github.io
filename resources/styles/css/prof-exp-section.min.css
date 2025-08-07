@@ -1,1 +1,1 @@
-#_prof-exp-section .section-content{display:flex;flex-flow:column nowrap}#_prof-exp-section .section-content div ul{padding:1rem 0 0 2rem;list-style-type:circle}
+#_prof-exp-section .section-content{display:flex;flex-wrap:wrap;gap:.5rem}#_prof-exp-section .section-content .job-exp-card ul{list-style-type:circle;padding-left:1rem}

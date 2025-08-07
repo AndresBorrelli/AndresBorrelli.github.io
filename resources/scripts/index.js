@@ -46,17 +46,11 @@ window.addEventListener('load', (e) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const section = entry.target;
-                const htmlSrc = section.dataset.src; // Ruta del HTML
-                // Construye la ruta del CSS basado en el ID de la sección
-                // Ejemplo: #home -> styles/home.css
+                const htmlSrc = section.dataset.src;
                 const cssId = section.id.substring(1);
-                const cssSrc = `resources/styles/css/${cssId}.min.css`; // Asume que tus CSS están en la carpeta 'styles'
-
-                // Si la sección aún no ha sido cargada
+                const cssSrc = `resources/styles/css/${cssId}.min.css`; 
                 if (htmlSrc && !section.classList.contains('loaded')) {
-                    // Cargar el CSS asociado a la sección
                     loadCSS(cssSrc);
-                    // Cargar el contenido HTML de la sección
                     fetch(htmlSrc)
                         .then(response => {
                             if (!response.ok) {
@@ -72,7 +66,7 @@ window.addEventListener('load', (e) => {
                         })
                         .catch(error => {
                             console.error(`Error al cargar la sección ${htmlSrc}:`, error);
-                            //section.innerHTML = `<p style="color: red;">Error al cargar el contenido de esta sección.</p>`;
+                            section.innerHTML = `<p style="color: red;">Error al cargar el contenido de esta sección.</p>`;
                             section.classList.add('loaded');
                             section.classList.remove('placeholder');
                             observer.unobserve(section);

@@ -1,11 +1,12 @@
 /* -------------------------------------------------------------------------- */
 #_prof-exp-section .section-content {
   display: flex;
-  flex-flow: column nowrap;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
-#_prof-exp-section .section-content div ul {
-  padding: 1rem 0 0 2rem;
+#_prof-exp-section .section-content .job-exp-card ul {
   list-style-type: circle;
+  padding-left: 1rem;
 }
 
 /* -------------------------------------------------------------------------- */

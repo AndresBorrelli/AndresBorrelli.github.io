@@ -1,0 +1,15 @@
+/* -------------------------------------------------------------------------- */
+#_home-section {
+  background-color: bisque;
+}
+#_home-section .section-content {
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 10% 30% 10%;
+  gap: 0.5rem;
+  height: 100% !important;
+  width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */

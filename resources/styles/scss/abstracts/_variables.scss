@@ -2,14 +2,22 @@
 /* V A R I A B L E S                                                          */
 /* -------------------------------------------------------------------------- */
 :root {
+
+    --main-font-color: #525252;
+    --main-nav-color: #0e0e0e;
+    --section-title-color: #101010;
+    --section-subtitle-color: #313131;
+    --section-content-title-color: #3f3f3f;
+    
     --main-bg-color: #EEF2FE;
-    --main-font-color: #0e0e0e;
-    --section-title-color: green;
-    --section-subtitle-color: blue;
+    --main-nav-bg-color: #EEF2FE;
+    
+
     --card-bg-color: #fff;
-    --card-title-color: #0f0f0f;
+    --card-title-color: #313131;
     
     --loader-color-1: #fff;
     --loader-color-2: #ff4500;
+    --common-hover-color: #ff4500;
 }
 /* -------------------------------------------------------------------------- */

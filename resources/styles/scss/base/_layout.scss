@@ -14,6 +14,7 @@ html {
 }
 h1, h2, h3, h4 {
     font-family: Poppins, sans-serif;
+    font-size: 16px;
     font-weight: 100;
 }
 /* -------------------------------------------------------------------------- */
@@ -27,60 +28,43 @@ main {
     width: 100%;
     .main-section {
         display: block;
-        min-height: 100dvh; 
+        height: 100dvh; min-height: 100dvh; 
         width: 100%;
         padding: 4rem 0.5rem 0.5rem 0.5rem;
         .section-title {
             font-family: Poppins;
             font-size: 1.3rem;
             font-weight: 100;
-            margin-bottom: 1rem;
+            line-height: 3rem;
             color: var(--section-title-color);
         }
         .section-subtitle {
             font-family: Poppins;
             font-size: 1.1rem;
             font-weight: 100;
+            line-height: 1.6rem;
             color: var(--section-subtitle-color);
         }
-        .section-content {
-            padding-left: 1rem;
+        .section-content-title {
+            font-family: Poppins;
+            font-size: 1rem;
+            font-weight: 100;
+            line-height: 1.4rem;
+            color: var(--section-content-title-color);
         }
-        &.loaded {
+        &.placeholder {
             .loader {
-                display: none;
+                display: inline-block; 
             }
         }
     }
 }
 /* -------------------------------------------------------------------------- */
-.loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid var(--loader-color-1);
-    border-bottom-color: var(--loader-color-2);
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
-    margin: calc(50% - 24px) 0 0 calc(50% - 24px);
-}
-
-@keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} 
-
-/* -------------------------------------------------------------------------- */
 .main-nav {
     position: fixed;
     display: block; 
     height: 3rem; width: 100%;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-nav-bg-color);
     padding: .5rem;
     .logo-link {
         display: block;
@@ -106,35 +90,89 @@ main {
             content: '\2630';
             font-size: 1.6rem;
             line-height: 3rem;
+            color: var(--main-nav-color);
             cursor: pointer;
         }
         &:hover {
-            color: orangered;
+            color: var(common-hover-color);
         }
     }
     ul {
         display: flex;
         flex-flow: column nowrap;
-        align-items: right;
         gap: 1rem;
         position: absolute;
         height: calc(100dvh - 3rem); width: 100%;
         top: 3rem; left: 101%;
         padding: 1rem;
-        background-color: whitesmoke;
         list-style-type: none;
         transition: 250ms ease;
+        background-color: var(--main-nav-bg-color);
+        z-index: 9999;
         li {
             align-self: flex-end;
             a {
                 font-size: 1.2rem;
                 &:hover {
-                    color: orangered;
+                    color: var(--common-hover-color);
                 }
             }
         }
     }
 }
+/* -------------------------------------------------------------------------- */
+.main-form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: .5rem;
+    .form-field {
+        display: block;
+        width: 100%;
+        .form-label {
+            display: block;
+            width: 100%;
+            line-height: 2rem;
+        }
+        .form-input, .form-textarea {
+            width: 100%;
+            border: 1px solid var(--main-fon-color);
+            border-radius: .3rem;
+            padding: .3rem;
+        }
+    }
+    .form-button-group {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        .form-button {
+            font-size: 1rem;
+            line-height: 1.8rem;
+            padding: .3rem;
+            border-radius: .3rem;
+            background-color: transparent;
+        }
+    }
+}
+/* -------------------------------------------------------------------------- */
+.loader {
+    display: none;
+    height: 48px; width: 48px;
+    border: 5px solid var(--loader-color-1);
+    border-bottom-color: var(--loader-color-2);
+    border-radius: 50%;
+    animation: rotation 500ms linear infinite;
+    margin: calc(75dvh - 248px) 0 0 calc(50% - 24px);
+    z-index: 99;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
 /* -------------------------------------------------------------------------- */
 @media (min-width: 768px) {
 
@@ -157,6 +195,7 @@ main {
                 a {
                     font-size: .9rem;
                     text-transform: capitalize;
+                    color: var(--main-nav-color);
                 }
             }
         }
