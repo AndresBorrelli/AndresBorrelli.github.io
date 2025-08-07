@@ -116,7 +116,7 @@ main {
 }
 main .main-section {
   display: block;
-  min-height: 100dvh;
+  min-height: calc(100dvh - 3rem);
   width: 100%;
   padding: 4rem 0.5rem 0.5rem 0.5rem;
 }
