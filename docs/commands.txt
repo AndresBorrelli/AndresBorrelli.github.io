@@ -1,4 +1,4 @@
-sass --watch --no-source-map resources\styles\scss:resources\styles\css --style=compressed
+sass --watch --no-source-map resources/styles/scss:resources/styles/css --style=compressed
 
 git init
 git add .
