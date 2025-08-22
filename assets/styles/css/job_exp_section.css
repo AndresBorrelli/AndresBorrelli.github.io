@@ -1,0 +1,12 @@
+/* -------------------------------------------------------------------------- */
+.job-exp-section .section-content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.3rem;
+}
+.job-exp-section .section-content .job-exp-card {
+  flex-basis: 100%;
+  padding: 0.3rem;
+}
+
+/* -------------------------------------------------------------------------- */
