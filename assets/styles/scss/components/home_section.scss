@@ -1,37 +1,54 @@
 /* -------------------------------------------------------------------------- */
 .home-section {
-    height: 100%;
+    height: calc(100dvh - var(--header-height)) !important;
     .section-content {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 50% 20% 20% 10%;
-        gap: 0px;
-        .deco-box {
-            padding: .5rem 0 .5rem 0;
-            overflow: hidden;
-            img {
-                height: 100%; width: auto;
-                border: 6px solid #fff;
-                margin: 0 auto;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;        
+        .panel-a {
+            height: 50%; width: 100%;
+            .photo-box {
+                height: 100%; width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                img {
+                    height: 100%; width: auto;
+                    outline: 6px solid #fff;
+                    border: 6px solid transparent;
+                    margin: 0 auto;
+                }
             }
         }
-        .title-box {
-            h1 {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-            }
-        }
-        .desc-box {
-        }
-        .links-box {
+        .panel-b {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            .download-cv {
-                padding: .8em;
-                font-size: 1.2rem;
-                text-transform: uppercase;
-                border-radius: .2em;
-                background-color: var(--download-cv-bg-color);
+            flex-flow: column nowrap;
+            align-items: stretch;
+            justify-content: space-around;
+            height: 50%; width: 100%;
+            .title-box {
+                h1 {
+                    font-family:Georgia, 'Times New Roman', Times, serif;
+                    font-size: 2rem;
+                }
+            }
+            .desc-box {
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+            .links-box {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 3rem;
+                .download-cv {
+                    padding: .8em;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    border-radius: .2em;
+                    background-color: var(--download-cv-bg-color);
+                }
             }
         }
     }
@@ -43,43 +60,28 @@
 
     .home-section {
         .section-content {
-            grid-template-columns: 1fr 1fr !important; 
-            grid-template-rows: 50% 30% 20% !important;
-            .deco-box {
-                grid-column: 2 / 3;
-                grid-row: 1 / 4;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            .panel-a {
+                order: 2;
+                height: 100%; width: 50%;
+                .photo-box {
+                    img {
+                    }
+                }
             }
-            .title-box {
-                grid-column: 1 / 2;
-                grid-row: 1 / 2;
+            .panel-b {
+                order: 1;
+                height: 100%; width: 50%;
                 display: flex;
+                flex-flow: column nowrap;
                 justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-            .desc-box {
-                grid-column: 1 / 2; 
-                grid-row: 2 / 3;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-            .links-box {
-                grid-column: 1 / 2;
-                grid-row: 3 / 4;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .download-cv {
-                    padding: .8em;
-                    font-size: 1.2rem;
-                    text-transform: uppercase;
-                    border-radius: .2em;
-                    background-color: var(--download-cv-bg-color);
+                .title-box {
+
+                }
+                .desc-box {
+
+                }
+                .links-box {
+
                 }
             }
         }

@@ -27,6 +27,8 @@ window.addEventListener('load', function(e) {
 
     setSectionLoaders();
 
+    //alert('Viewport: ' + window.innerWidth + 'x' + window.innerHeight);
+
 });
 //------------------------------------------------------------------------------
 function setNavItemsEvents() {
