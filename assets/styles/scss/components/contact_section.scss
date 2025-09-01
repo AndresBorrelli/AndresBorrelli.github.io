@@ -1,7 +1,49 @@
 /* -------------------------------------------------------------------------- */
 .contact-section {
     .section-content {
-
+        height: 100%;
+        min-height: calc(100dvh - var(--header-height));
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        .contact-panel-a {
+            flex: 40% 1 1;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            padding: .8rem;
+            border-radius: 6px;
+            background-color: #84837F;
+            p {
+                color: #f0f0f0;
+                font-size: 1.4rem
+            }
+            a {
+                color: #fff;
+                font-size: 1.6rem
+            }
+        }
+        .contact-panel-b {
+            flex: 60% 1 1;
+        }
     }
+}
+/* -------------------------------------------------------------------------- */
+/* Media queries                                                              */
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 850px)  {
+.contact-section {
+    .section-content {
+        flex-flow: row nowrap;
+        .contact-panel-a {
+            flex: 50% 1 1;
+        }
+        .contact-panel-b {
+            flex: 50% 1 1;
+        }
+    }
+}
+
 }
 /* -------------------------------------------------------------------------- */

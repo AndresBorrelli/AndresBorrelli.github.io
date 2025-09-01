@@ -51,6 +51,7 @@ h4 { font-size: 1.2rem; }
         padding-left: 1rem;
         h2 {
             line-height: var(--header-height);
+            font-size: 1.8rem;
             font-weight: 100;
         }
     }
@@ -101,14 +102,53 @@ h4 { font-size: 1.2rem; }
         }
     }
 }
+/* -------------------------------------------------------------------------- */
 
 .main-content {
     .main-section {
         min-height: 100dvh;
         padding-top: var(--header-height);
+        .section-title {
+            padding-left: 1rem;
+            border-top: 1px solid black;
+        }
         .section-content {
             padding: 1rem;
         }
+    }
+}
+/* -------------------------------------------------------------------------- */
+.main-footer {
+
+    display: block;
+    height: 8rem; width: 100%;
+    background-color: var(--footer-bg-color);
+    * {
+        color: var(--footer-font-color);
+    }
+}
+/* -------------------------------------------------------------------------- */
+.contact-form {
+    .form-field {
+        padding-bottom: 1rem;
+        .form-label {
+            display: block;
+        }
+        .form-input, .form-textarea {
+            display: block;
+            width: 100%;
+            border: 1px solid var(--main-font-color);
+            border-radius: 6px;
+            padding: .8rem;
+        }
+        .form-textarea {
+            resize: vertical;
+        }
+    }
+    .form-button-group {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
     }
 }
 /* -------------------------------------------------------------------------- */

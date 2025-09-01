@@ -136,6 +136,7 @@ h4 {
 }
 .main-header .logo-link h2 {
   line-height: var(--header-height);
+  font-size: 1.8rem;
   font-weight: 100;
 }
 .main-header .main-nav-button {
@@ -184,11 +185,50 @@ h4 {
   padding: 2.2rem;
 }
 
+/* -------------------------------------------------------------------------- */
 .main-content .main-section {
   min-height: 100dvh;
   padding-top: var(--header-height);
 }
+.main-content .main-section .section-title {
+  padding-left: 1rem;
+  border-top: 1px solid black;
+}
 .main-content .main-section .section-content {
+  padding: 1rem;
+}
+
+/* -------------------------------------------------------------------------- */
+.main-footer {
+  display: block;
+  height: 8rem;
+  width: 100%;
+  background-color: var(--footer-bg-color);
+}
+.main-footer * {
+  color: var(--footer-font-color);
+}
+
+/* -------------------------------------------------------------------------- */
+.contact-form .form-field {
+  padding-bottom: 1rem;
+}
+.contact-form .form-field .form-label {
+  display: block;
+}
+.contact-form .form-field .form-input, .contact-form .form-field .form-textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--main-font-color);
+  border-radius: 6px;
+  padding: 0.8rem;
+}
+.contact-form .form-field .form-textarea {
+  resize: vertical;
+}
+.contact-form .form-button-group {
+  display: flex;
+  gap: 1rem;
   padding: 1rem;
 }
 
