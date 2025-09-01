@@ -70,7 +70,6 @@ a:visited, a:active {
 /* -------------------------------------------------------------------------- */
 html {
   font-size: clamp(14px, 2dvw, 24px);
-  font-weight: 100;
   line-height: 1.6;
   color: var(--main-font-color);
   -webkit-font-smoothing: antialiased;
@@ -236,6 +235,9 @@ h4 {
 /* Media queries                                                              */
 /* -------------------------------------------------------------------------- */
 @media only screen and (min-width: 850px) {
+  html {
+    font-weight: 100;
+  }
   .main-header {
     display: flex;
   }
