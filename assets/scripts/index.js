@@ -15,8 +15,6 @@ const sectionObserverOptions = {
 // -----------------------------------------------------------------------------
 window.addEventListener('load', function(e) {
 
-    console.log('Página cargada, iniciando la carga de secciones...');
-
     var mainElement = document.querySelector('main');
     
     delayForDebug = mainElement && mainElement.getAttribute('delayForDebug') ? parseInt(mainElement.getAttribute('delayForDebug')) * 1000 : 0;
@@ -26,8 +24,6 @@ window.addEventListener('load', function(e) {
     setNavItemsEvents();
 
     setSectionLoaders();
-
-    //alert('Viewport: ' + window.innerWidth + 'x' + window.innerHeight);
 
 });
 //------------------------------------------------------------------------------
@@ -43,14 +39,12 @@ function setNavItemsEvents() {
             mainNavButton.checked = false;
         });
     }
-
-    console.log('Eventos de navegación configurados.');
 }   
 //------------------------------------------------------------------------------
 function loadSectionStyles(section) {
-    console.log('Cargando estilos para la sección:', section.id);
 
     var cssFile = section.getAttribute('data-css');
+
     if (cssFile) {
         var link = document.createElement('link');
         link.rel = 'stylesheet';
@@ -72,8 +66,6 @@ function loadSection(entries, observer) {
 
         if (src) {
             setTimeout(function() {
-                console.log('Cargando sección:', entry.target.id);
-
                 var xhr = new XMLHttpRequest();
                 xhr.open('GET', src, true);
                 xhr.onreadystatechange = function() {
@@ -104,8 +96,6 @@ function loadSection(entries, observer) {
 //------------------------------------------------------------------------------
 function setSectionLoaders() {
 
-    console.log('Configurando cargadores de secciones...');
-
     sectionObserver = new IntersectionObserver(loadSection, sectionObserverOptions);
 
     sectionsToLoad = document.querySelectorAll('section.main-section.not-loaded');
@@ -114,7 +104,5 @@ function setSectionLoaders() {
         sectionObserver.observe(sectionsToLoad[i]);
     }
     
-    console.log('Cargadores de secciones configurados.');
-
 }
 // -----------------------------------------------------------------------------
