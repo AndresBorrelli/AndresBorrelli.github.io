@@ -1,17 +1,19 @@
 /* -------------------------------------------------------------------------- */
-.contact-section .section-content {
-  height: 100%;
+.contact-section {
   min-height: calc(100dvh - var(--header-height));
+}
+.contact-section .section-content {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   gap: 1rem;
 }
 .contact-section .section-content .contact-panel-a {
-  flex: 40% 1 1;
+  flex: 30% 1 1;
   display: flex;
   flex-flow: column;
   justify-content: center;
+  align-items: center;
   padding: 0.8rem;
   border-radius: 6px;
   background-color: #84837F;

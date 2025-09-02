@@ -2,8 +2,8 @@
 /*                                                                            */
 /* -------------------------------------------------------------------------- */
 html {
-    font-size: clamp(14px, 2dvw, 24px);
-    line-height: 1.6;
+    font-size: clamp(16px, 2dvw, 20px);
+    line-height: 1.1;
     color: var(--main-font-color);
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
@@ -49,8 +49,6 @@ h4 { font-size: 1.2rem; }
         padding-left: 1rem;
         h2 {
             line-height: var(--header-height);
-            font-size: 1.8rem;
-            font-weight: 100;
         }
     }
     .main-nav-button {
@@ -71,7 +69,6 @@ h4 { font-size: 1.2rem; }
         padding-right: 1rem;
         &:before {
             content: '\2630';
-            font-size: 1.8rem;
             color: var(--main-nav-color);
             line-height: var(--header-height);
             cursor: pointer;
@@ -93,7 +90,6 @@ h4 { font-size: 1.2rem; }
             padding-top: 2rem;
             li {
                 a {
-                    font-size: 1.4rem;
                     padding: 2.2rem;
                 }
             }
@@ -137,8 +133,11 @@ h4 { font-size: 1.2rem; }
     .footer-nav {
         flex-basis: 100%;
         flex-grow: 1;
-        ul li a:before {
-            content: '- ';
+        ul {
+            display: flex;
+            li a:before {
+                content: '- ';
+            }
         }
     }
     .cookies-note {
@@ -146,7 +145,11 @@ h4 { font-size: 1.2rem; }
         flex-grow: 1;
         margin-top: 2rem;
         p {
-            font-size: .6;
+        }
+    }
+    .footer-linkedin {
+        svg {
+            vertical-align: middle;
         }
     }
 }
@@ -156,6 +159,7 @@ h4 { font-size: 1.2rem; }
         padding-bottom: 1rem;
         .form-label {
             display: block;
+            padding-bottom: .5rem;
         }
         .form-input, .form-textarea {
             display: block;
@@ -198,7 +202,6 @@ h4 { font-size: 1.2rem; }
                 padding: 0 1rem 0 0;
                 li {
                     a {
-                       font-size: .8rem;
                        line-height: var(--header-height);
                        text-transform: uppercase;
                        padding: 0px;

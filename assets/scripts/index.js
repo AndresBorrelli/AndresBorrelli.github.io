@@ -23,13 +23,13 @@ window.addEventListener('load', function(e) {
   
     setNavItemsEvents();
 
+    setNavItemsEvents();
+
     setSectionLoaders();
 
 });
 //------------------------------------------------------------------------------
 function setNavItemsEvents() {
-
-    console.log('Iniciando eventos de navegación...');
 
     var navItems = document.querySelectorAll('.main-nav-item');
   
@@ -50,7 +50,6 @@ function loadSectionStyles(section) {
         link.rel = 'stylesheet';
         link.href = cssFile;
         document.head.appendChild(link);
-        console.log('Estilos cargados:', cssFile);
     } else {
         console.warn('No se encontró el archivo CSS para la sección:', section.id);
     }
@@ -75,7 +74,7 @@ function loadSection(entries, observer) {
                         if (loader) {
                             loader.parentNode.removeChild(loader);
                         }
-                        // Agrega el contenido HTML al final de .section-content
+                        // Agrega el contenido HTML al .section-content
                         var contentDiv = section.querySelector('.section-content');
                         if (contentDiv) {
                             contentDiv.insertAdjacentHTML('beforeend', xhr.responseText);
