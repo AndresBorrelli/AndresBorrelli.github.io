@@ -13,7 +13,7 @@
                 justify-content: space-around;
                 align-items: center;
                 img {
-                    height: 100%; width: auto;
+                    height: auto; width: auto;
                     outline: 6px solid #fff;
                     border: 6px solid transparent;
                     margin: 0 auto;
@@ -44,7 +44,6 @@
                 padding: 3rem;
                 .download-cv {
                     padding: .8em;
-                    font-size: 1.2rem;
                     text-transform: uppercase;
                     border-radius: .2em;
                     background-color: var(--download-cv-bg-color);
