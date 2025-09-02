@@ -19,13 +19,22 @@
 .contact-section .section-content .contact-panel-a p {
   color: #f0f0f0;
   font-size: 1.4rem;
+  line-height: 3rem;
 }
 .contact-section .section-content .contact-panel-a a {
   color: #fff;
   font-size: 1.6rem;
+  line-height: 3.2rem;
 }
 .contact-section .section-content .contact-panel-b {
-  flex: 60% 1 1;
+  flex: 70% 1 1;
+}
+.contact-section .section-content .contact-panel-b .form-textarea {
+  height: 6rem;
+}
+.contact-section .section-content .contact-panel-b .text-field {
+  font-size: 1.6rem;
+  padding: 2rem 0;
 }
 
 /* -------------------------------------------------------------------------- */

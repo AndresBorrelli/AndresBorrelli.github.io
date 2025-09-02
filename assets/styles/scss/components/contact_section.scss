@@ -17,15 +17,24 @@
             background-color: #84837F;
             p {
                 color: #f0f0f0;
-                font-size: 1.4rem
+                font-size: 1.4rem;
+                line-height: 3rem;
             }
             a {
                 color: #fff;
-                font-size: 1.6rem
+                font-size: 1.6rem;
+                line-height: 3.2rem;
             }
         }
         .contact-panel-b {
-            flex: 60% 1 1;
+            flex: 70% 1 1;
+            .form-textarea {
+                height: 6rem;
+            }
+            .text-field {
+                font-size: 1.6rem;
+                padding: 2rem 0 ;
+             }
         }
     }
 }
