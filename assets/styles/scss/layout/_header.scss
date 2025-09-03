@@ -1,0 +1,89 @@
+/* -------------------------------------------------------------------------- */
+/* H E A D E R                                                                */
+/* -------------------------------------------------------------------------- */
+.main-header {
+    display: block;
+    position: fixed;
+    top: 0;
+    height: var(--header-height);
+    width: 100%;
+    background-color: var(--main-bg-color);
+    .logo-link {
+        float: left;
+        padding-left: .8rem;
+        h2 {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 100;
+            line-height: var(--header-height);
+        }
+    }
+    .main-nav-button {
+        display: none;
+        &:checked + .main-nav-button-label::before {
+            content: '\2715';
+        }
+        &:checked ~ .main-nav {
+            height: calc(100dvh - var(--header-height));
+            z-index: 9;
+        }
+    }
+    .main-nav-button-label {
+        float: right;
+        line-height: var(--header-height);
+        font-size: 2rem;
+        padding-right: .8rem;
+        cursor: pointer;
+        &::before {
+            content: '\2630';
+        }
+    }
+    .main-nav {
+        display: block;
+        height: 0; width: 100%;
+        overflow: hidden;
+        background-color: var(--main-bg-color);
+        transition: 250ms ease;
+        ul {
+            display: block;
+            height: 100%;
+            width: 100%;
+            padding: 1rem;
+            a {
+                font-size: 2rem;
+                line-height: 2em;
+            }
+        }
+    }
+}
+/* -------------------------------------------------------------------------- */
+/* Media queries 
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 850px)  {
+    .main-header {
+        .main-nav-button:checked ~ .main-nav {
+            height: var(--header-height);
+            z-index: 9;
+        }        
+        .main-nav-button-label {
+            display: none;
+        }
+        .main-nav {
+            height: var(--header-height);
+            width: auto;
+            ul {
+                text-align: right;
+                padding: 0;
+                li {
+                    display: inline-block;
+                    a {
+                        font-size: .8rem;
+                        line-height: var(--header-height);
+                        text-transform: uppercase;
+                        padding: 0 .4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+/* -------------------------------------------------------------------------- */

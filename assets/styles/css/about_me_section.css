@@ -1,2 +1,25 @@
 /* -------------------------------------------------------------------------- */
+.about-me-section {
+  display: flex !important;
+  flex-flow: column;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Media queries 
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  .about-me-section {
+    flex-flow: row;
+  }
+  .about-me-section .section-title {
+    flex: 1 1 20%;
+    padding: 0 0.8rem !important;
+    line-height: normal !important;
+  }
+  .about-me-section .section-content {
+    flex: 1 1 70%;
+    line-height: 1em;
+    padding: 0;
+  }
+}
 /* -------------------------------------------------------------------------- */
