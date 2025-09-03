@@ -1,23 +1,24 @@
 /* -------------------------------------------------------------------------- */
 .about-me-section {
-    display: flex !important;
-    flex-flow: column;
+    .section-title {
+        padding-bottom: 2rem;
+    }
+    .section-content {
+        p {
+            font-size: 1.2em;
+        }
+    }
 }
 /* -------------------------------------------------------------------------- */
 /* Media queries 
 /* -------------------------------------------------------------------------- */
 @media only screen and (min-width: 768px) {
     .about-me-section {
-        flex-flow: row;
         .section-title {
-            flex: 1 1 20%;
-            padding: 0 .8rem !important;
-            line-height: normal !important;
+
         }
         .section-content {
-            flex: 1 1 70%;
-            line-height: 1em;
-            padding: 0;
+
         }
     }
 }

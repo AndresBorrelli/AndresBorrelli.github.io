@@ -22,12 +22,12 @@
             }
         }
         .panel-b {
-            display: flex;
-            flex-flow: column nowrap;
             height: 50%;
             width: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-evenly;
             .title-box {
-                flex: 1 0 40%;
                 text-align: center;
                 h1 {
                     i {
@@ -44,14 +44,12 @@
                 }
             }
             .text-box {
-                flex: 1 0 40%;
                 p {
                     text-align: center;
                     font-size: 1.4em;
                 }
             }
             .links-box {
-                flex: 1 0 20%;
                 width: 100%;
                 display: flex;
                 flex-flow: column nowrap;
@@ -82,20 +80,11 @@
                 order: 1;
                 height: 100%;
                 width: 50%;
-                justify-content: space-evenly; 
-                .title-box {
-                    flex: 0 1 auto;
-                }
                 .text-box {
-                    flex: 0 1 auto;
                     p {
                         font-size: 1em;
                     }
                 }
-                .lins-box {
-                    flex: 0 1  auto;
-                }
-
             }
         }
     }

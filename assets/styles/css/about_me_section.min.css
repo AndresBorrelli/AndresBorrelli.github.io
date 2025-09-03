@@ -1,1 +1,1 @@
-.about-me-section{display:flex !important;flex-flow:column}@media only screen and (min-width: 768px){.about-me-section{flex-flow:row}.about-me-section .section-title{flex:1 1 20%;padding:0 .8rem !important;line-height:normal !important}.about-me-section .section-content{flex:1 1 70%;line-height:1em;padding:0}}
+.about-me-section .section-title{padding-bottom:2rem}.about-me-section .section-content p{font-size:1.2em}
