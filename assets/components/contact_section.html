@@ -4,7 +4,7 @@
 </div>
 
 <div class="contact-panel-b">
-    <form id="_contact-form" action="https://formspree.io/f/YOUR_FORM_ID" class="main-form contact-form" target="_top" method="POST">
+    <form id="_contact-form" action="https://formspree.io/f/xdkddqby" class="main-form contact-form" target="_top" method="POST">
         <div class="text-field">
             <p>
             O enviame tu mensaje a través de este formulario
@@ -12,7 +12,7 @@
         </div>
         <div class="form-field">
             <label class="form-label" for="name">Tu nombre:</label>
-            <input id="name" name="name" required class="form-input"  type="text" />
+            <input id="name" name="name" required class="form-input" type="text" maxlength="64" />
         </div>
         
         <div class="form-field">
@@ -22,7 +22,7 @@
 
         <div class="form-field">
             <label class="form-label" for="message">Tu mensaje</label>
-            <textarea id="message" name="message" class="form-textarea" required></textarea>
+            <textarea id="message" name="message" class="form-textarea" required maxlength="256"></textarea>
         </div>
 
         <div class="form-button-group">
@@ -31,3 +31,5 @@
 
     </form>
 </div>
+
+<script src="validate_contact_form.js"></script>

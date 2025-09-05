@@ -20,7 +20,7 @@
 /* -------------------------------------------------------------------------- */
 @media only screen and (min-width: 768px) {
   .hard-skills-section .section-content .hard-skills-card {
-    flex: 1 1 48%;
+    flex: 1 1 40%;
   }
   .hard-skills-section .section-content .hard-skills-card .section-subtitle {
     padding: 1rem 0;

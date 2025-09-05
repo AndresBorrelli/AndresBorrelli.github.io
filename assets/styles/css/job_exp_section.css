@@ -7,6 +7,19 @@
 .job-exp-section .section-content .job-exp-card {
   flex: 1 1 100%;
 }
+.job-exp-section .section-content .job-exp-card .job-exp-title {
+  padding: 0.2rem 0 0.4rem 0 !important;
+  border-top: 1px solid #000;
+}
+.job-exp-section .section-content .job-exp-card .job-exp-employer {
+  padding: 0.2rem 0 0.4rem 0 !important;
+}
+.job-exp-section .section-content .job-exp-card .job-exp-location {
+  padding: 0.2rem 0 0.4rem 0 !important;
+}
+.job-exp-section .section-content .job-exp-card .job-exp-period {
+  padding: 0.2rem 0 0.6rem 0 !important;
+}
 .job-exp-section .section-content .job-exp-card ul {
   padding-left: 1rem;
   list-style-type: disc;

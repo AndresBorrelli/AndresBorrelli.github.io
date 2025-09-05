@@ -6,6 +6,19 @@
         gap: 2rem;
         .job-exp-card {
             flex: 1 1 100%;
+            .job-exp-title {
+                padding: .2rem 0 .4rem 0 !important;
+                border-top: 1px solid #000;
+            }
+            .job-exp-employer {
+                padding: .2rem 0 .4rem 0 !important;
+            }
+            .job-exp-location {
+                padding: .2rem 0 .4rem 0 !important;
+            }
+            .job-exp-period {
+                padding: .2rem 0 .6rem 0 !important;
+            }               
             ul {
                 padding-left: 1rem;
                 list-style-type: disc;

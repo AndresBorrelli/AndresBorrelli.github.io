@@ -1,9 +1,14 @@
 /* -------------------------------------------------------------------------- */
 /*  L A Y O U T   G E N E R A L                                               */
 /* -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* -------------------------------------------------------------------------- */
+
 html {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: var(--sans-font-fam);
     font-size: clamp(16px, 2dvw, 20px);
+    font-weight: 100;
     color: var(--main-font-color);
     scroll-behavior: smooth;
     background-color: var(--main-bg-color);
@@ -11,7 +16,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--titles-color);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
 }
 
 h1 { font-size: 1.8rem; }
@@ -48,8 +53,9 @@ body {
 .main-content {
     .main-section {
         min-height: 100dvh;
+        max-width: 1000px;
+        margin: 0 auto;
         padding-top: var(--header-height);
-        border-bottom: 1px solid #0c0c0c;
         .section-title {
             line-height: 2em;
             padding: .8rem;
@@ -92,7 +98,7 @@ body {
 /* -------------------------------------------------------------------------- */
 /* Media queries 
 /* -------------------------------------------------------------------------- */
-@media only screen and (min-width: 428px) {
+@media only screen and (min-width: 768px) {
 
 }
 /* -------------------------------------------------------------------------- */
