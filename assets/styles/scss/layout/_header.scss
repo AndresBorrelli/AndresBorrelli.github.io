@@ -16,6 +16,9 @@
             font-weight: 100;
             line-height: var(--header-height);
         }
+        img {
+            max-height: var(--header-height);
+        }
     }
     .main-nav-button {
         display: none;

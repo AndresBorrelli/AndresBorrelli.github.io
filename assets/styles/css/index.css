@@ -91,6 +91,9 @@ a:visited, a:active {
   font-weight: 100;
   line-height: var(--header-height);
 }
+.main-header .logo-link img {
+  max-height: var(--header-height);
+}
 .main-header .main-nav-button {
   display: none;
 }
@@ -225,7 +228,6 @@ a:visited, a:active {
 html {
   font-family: var(--sans-font-fam);
   font-size: clamp(16px, 2dvw, 20px);
-  font-weight: 100;
   color: var(--main-font-color);
   scroll-behavior: smooth;
   background-color: var(--main-bg-color);
@@ -233,7 +235,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--titles-color);
-  font-weight: 100;
+  font-weight: 200;
 }
 
 h1 {
@@ -291,6 +293,7 @@ body {
 .main-content .main-section .section-title {
   line-height: 2em;
   padding: 0.8rem;
+  border-top: 1px solid #3D84A8;
 }
 .main-content .main-section .section-content {
   padding: 0 0.8rem;
@@ -325,4 +328,9 @@ body {
 /* -------------------------------------------------------------------------- */
 /* Media queries 
 /* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+  }
+}
 /* -------------------------------------------------------------------------- */
