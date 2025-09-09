@@ -76,7 +76,7 @@ a:visited, a:active {
 /* -------------------------------------------------------------------------- */
 .main-header {
   display: block;
-  position: fixed;
+  position: sticky;
   top: 0;
   height: var(--header-height);
   width: 100%;
@@ -232,7 +232,7 @@ a:visited, a:active {
 /* -------------------------------------------------------------------------- */
 html {
   font-family: var(--sans-font-fam);
-  font-size: clamp(16px, 2dvw, 20px);
+  font-size: clamp(14px, 2dvw, 20px);
   color: var(--main-font-color);
   scroll-behavior: smooth;
   background-color: var(--main-bg-color);
