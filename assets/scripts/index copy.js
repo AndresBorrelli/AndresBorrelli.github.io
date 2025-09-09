@@ -33,7 +33,7 @@ window.addEventListener('load', function(e) {
 //------------------------------------------------------------------------------
 function setNavItemsEvents() {
 
-    //navItems[0].classList.add('current-link');
+    navItems[0].classList.add('current-link');
 
     for (var i = 0; i < navItems.length; i++) {
         navItems[i].addEventListener('click', function (e) {
@@ -54,7 +54,6 @@ function loadSectionStyles(section) {
         document.head.appendChild(link);
     } else {
         console.warn('No se encontró el archivo CSS para la sección:', section.id);
-        return(false);
     }
 }
 //------------------------------------------------------------------------------
@@ -64,8 +63,8 @@ function loadSection(entries, observer) {
 
     if (entry.isIntersecting) {
         var section = entry.target;
-        var src = section.getAttribute('data-src');
         setCurrentLink(section);
+        var src = section.getAttribute('data-src');
         if (section.classList.contains('not-loaded') && src) {
             setTimeout(function() {
                 var xhr = new XMLHttpRequest();
@@ -106,13 +105,13 @@ function setSectionLoaders() {
 function setCurrentLink(currentSection) {
 
     for (var j = 0; j < navItems.length; j++) {
-        navItems[j].classList.remove('active'); 
+        navItems[j].classList.remove('current-link'); 
     }
 
     const activeLink = document.querySelector(`.main-nav-item[href="#${currentSection.id}"]`);
     
     if (activeLink) {
-        activeLink.classList.add("active");
+        activeLink.classList.add("current-link");
     }
 
 }
