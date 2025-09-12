@@ -1,27 +1,39 @@
 /* -------------------------------------------------------------------------- */
 /*  L A Y O U T   G E N E R A L                                               */
 /* -------------------------------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 /* -------------------------------------------------------------------------- */
-
 html {
-    font-family: var(--sans-font-fam);
-    font-size: clamp(14px, 2dvw, 20px);
-    color: var(--main-font-color);
+
+    font-family: sans-serif;
+    color: #000;
     scroll-behavior: smooth;
     background-color: var(--main-bg-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--titles-color);
-    font-weight: 200;
+    font-weight: 400;
 }
 
-h1 { font-size: 1.8rem; }
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.4rem; }
-h4 { font-size: 1.2rem; }
+body {
+    width: 100%;
+}
+
+/* -------------------------------------------------------------------------- */
+.main-container {
+    .main-section {
+        width: 100%;
+        min-height: 100dvh; max-width: 1100px;
+        padding: var(--header-height) 1rem;
+        margin: 0 auto;
+        .section-title {
+            padding-bottom: 1rem;
+        }
+        .section-content {
+            width: 100%;
+        }
+    }
+}
 /* -------------------------------------------------------------------------- */
 /* L O A D E R                                                                */
 /* -------------------------------------------------------------------------- */
@@ -43,65 +55,12 @@ h4 { font-size: 1.2rem; }
     100% {
         transform: rotate(360deg);
     }
-} 
-/* -------------------------------------------------------------------------- */
-body {
-    width: 100%;
-}
-/* -------------------------------------------------------------------------- */
-.main-content {
-    .main-section {
-        min-height: 100dvh;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding-top: var(--header-height);
-        .section-title {
-            line-height: 2em;
-            padding: .8rem;
-            border-top: 1px solid #3D84A8;
-        }
-        .section-content {
-            padding: 0 .8rem;
-        }
-    }
-}
-/* -------------------------------------------------------------------------- */
-.main-form {
-    .form-field {
-        .form-label {
-            display: block;
-            padding: .8rem 0 .4rem 0;
-        }
-        .form-input, .form-textarea {
-            width: 100%;
-            font-family: inherit;
-            line-height: 1.2rem;
-            border: 1px solid #0c0c0c;
-            border-radius: .3rem;
-            padding: .2rem;
-
-        }
-    }
-    .form-button-group {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: end;
-        gap: 1rem;
-        padding: 1rem 0;
-        .form-button {
-            padding: .2rem;
-            border-radius: .3rem;
-            cursor: pointer;
-        }
-    }
 }
 /* -------------------------------------------------------------------------- */
 /* Media queries 
 /* -------------------------------------------------------------------------- */
 @media only screen and (min-width: 768px) {
 
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: 100;
-    }   
+
 }
 /* -------------------------------------------------------------------------- */

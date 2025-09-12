@@ -1,54 +1,25 @@
 /* -------------------------------------------------------------------------- */
 .contact-section {
-    .section-content {
-        height: 100%;
-        display: flex;
-        flex-flow:column;
-        gap: .8rem;
-        .contact-panel-a {
-            flex: 1 1 30%;
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            background-color: #7d7d7d;
-            padding: .8rem;
-            border-radius: .6rem;
-            p, a {
-                color: #f0f0f0;
-                font-size: 1.2rem;
-                line-height: 1.8rem;
-            }
-        }
-        .contact-panel-b {
-            flex: 1 1 70%;
-            padding: 0;
-            .contact-form {
-            }
-        }
-    }
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .contact-form {
 
+    }
 }
 /* -------------------------------------------------------------------------- */
 /* Media queries                                                              */
 /* -------------------------------------------------------------------------- */
 @media only screen and (min-width: 768px)  {
     .contact-section {
+        width: 100%;
         .section-content {
-            flex-flow: row nowrap;
-            align-items: stretch;
-            align-content: stretch;
-            .contact-panel-a {
-                flex-grow:1;
-            }
-            .contact-panel-b {
-                flex-grow:1;
-                .contact-form {
-                }
+            max-width: 800px !important;
+            margin: 0 auto;
+            .form-textarea {
+                height: 14em;
             }
         }
-
     }
 }
 /* -------------------------------------------------------------------------- */

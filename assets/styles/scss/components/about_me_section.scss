@@ -1,12 +1,8 @@
 /* -------------------------------------------------------------------------- */
 .about-me-section {
-    .section-title {
-        padding-bottom: 2rem;
-    }
+    height: 100%;
     .section-content {
-        p {
-            font-size: 1.2em;
-        }
+
     }
 }
 /* -------------------------------------------------------------------------- */
@@ -14,9 +10,11 @@
 /* -------------------------------------------------------------------------- */
 @media only screen and (min-width: 768px) {
     .about-me-section {
-        .section-title {
-
-        }
+        max-width: 800px !important;
+        margin: 0 auto !important;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 2rem;
         .section-content {
 
         }

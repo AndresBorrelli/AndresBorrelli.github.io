@@ -1,12 +1,17 @@
 /* -------------------------------------------------------------------------- */
-.about-me-section .section-title {
-  padding-bottom: 2rem;
+.about-me-section {
+  height: 100%;
 }
-.about-me-section .section-content p {
-  font-size: 1.2em;
-}
-
 /* -------------------------------------------------------------------------- */
 /* Media queries 
 /* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  .about-me-section {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+  }
+}
 /* -------------------------------------------------------------------------- */

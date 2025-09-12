@@ -1,28 +1,40 @@
+@charset "UTF-8";
 /* -------------------------------------------------------------------------- */
+.job-exp-section {
+  width: 100%;
+}
 .job-exp-section .section-content {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-flow: column nowrap;
+  gap: 0.8rem;
 }
 .job-exp-section .section-content .job-exp-card {
-  flex: 1 1 100%;
+  border-top: 1px solid #0c0c0c;
 }
 .job-exp-section .section-content .job-exp-card .job-exp-title {
-  padding: 0.2rem 0 0.4rem 0 !important;
-  border-top: 1px solid #3D84A8;
+  padding-top: 0.4em;
+  font-weight: 400;
 }
 .job-exp-section .section-content .job-exp-card .job-exp-employer {
-  padding: 0.2rem 0 0.4rem 0 !important;
-}
-.job-exp-section .section-content .job-exp-card .job-exp-location {
-  padding: 0.2rem 0 0.4rem 0 !important;
-}
-.job-exp-section .section-content .job-exp-card .job-exp-period {
-  padding: 0.2rem 0 0.6rem 0 !important;
+  font-weight: 400;
 }
 .job-exp-section .section-content .job-exp-card ul {
-  padding-left: 1rem;
-  list-style-type: disc;
+  padding: 0.4em;
+  list-style-type: "-";
+}
+.job-exp-section .section-content .job-exp-card ul li {
+  padding: 0.4rem;
 }
 
+/* -------------------------------------------------------------------------- */
+/* Media queries 
+/* -------------------------------------------------------------------------- */
+/* Móviles landscape y deskptop */
+@media only screen and (min-width: 768px), (max-width: 900px) and (orientation: landscape) {
+  .job-exp-section {
+    max-width: 800px !important;
+    width: 100%;
+  }
+}
 /* -------------------------------------------------------------------------- */

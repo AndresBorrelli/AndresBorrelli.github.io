@@ -1,39 +1,47 @@
 /* -------------------------------------------------------------------------- */
 .hard-skills-section {
+    width: 100%;
     .section-content {
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
+        flex-direction: column;
         .hard-skills-card {
-            flex: 1 1 100%;
-            .section-subtitle {
-                padding: 1rem 0;
+            width: 100%;
+            flex-wrap: wrap;
+            section-subtitle {
+
             }
-          
             ul {
-                padding-left: 1rem;
-                list-style-type: disc;
+                display: flex;
+                flex-direction: column;
+                padding: .8rem;
             }
         }
     }
 }
 /* -------------------------------------------------------------------------- */
-/* Media queries                                                              */
+/* Media queries 
 /* -------------------------------------------------------------------------- */
-@media only screen and (min-width: 768px)  {
-    .hard-skills-section {
+
+/* Móviles landscape y deskptop */
+
+@media only screen and (min-width: 768px),
+    (max-width: 900px) and (orientation: landscape) {
+   .hard-skills-section {
+        max-width: 800px !important;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         .section-content {
+            flex-flow: row wrap;
+            justify-items: center;
+            gap: 1rem;
             .hard-skills-card {
-                flex: 1 1 40%;
-                .section-subtitle {
-                    padding: 1rem 0;
-                }
-                ul {
-                    padding-left: 1rem;
-                    list-style-type: disc;
-                }
+                width: 45%;
             }
         }
-    }
+    } 
+
 }
 /* -------------------------------------------------------------------------- */
