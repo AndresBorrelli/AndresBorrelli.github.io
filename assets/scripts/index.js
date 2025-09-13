@@ -14,6 +14,7 @@ const sectionObserverOptions = {
 };
 
 var navItems;
+ 
 // -----------------------------------------------------------------------------
 window.addEventListener('load', function(e) {
 
@@ -24,6 +25,7 @@ window.addEventListener('load', function(e) {
     mainNav = this.document.querySelector('#main-nav')
 
     navItems = document.querySelectorAll('.main-nav-item');
+    footerNavItems = document.querySelectorAll('.footer-nav-item');
   
     setNavItemsEvents();
 
@@ -105,12 +107,12 @@ function setSectionLoaders() {
 // -----------------------------------------------------------------------------
 function setCurrentLink(currentSection) {
 
-    for (var j = 0; j < navItems.length; j++) {
-        navItems[j].classList.remove('active'); 
+    for (var i = 0; i < navItems.length; i++) {
+        navItems[i].classList.remove('active'); 
     }
 
     const activeLink = document.querySelector(`.main-nav-item[href="#${currentSection.id}"]`);
-    
+        
     if (activeLink) {
         activeLink.classList.add("active");
     }

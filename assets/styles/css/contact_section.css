@@ -1,9 +1,10 @@
 /* -------------------------------------------------------------------------- */
-.contact-section {
+.contact-section .section-content {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
+
 /* -------------------------------------------------------------------------- */
 /* Media queries                                                              */
 /* -------------------------------------------------------------------------- */
@@ -15,8 +16,14 @@
     max-width: 800px !important;
     margin: 0 auto;
   }
-  .contact-section .section-content .form-textarea {
-    height: 14em;
+  .contact-section .section-content .text-panel {
+    padding: 1.4em 0;
+  }
+  .contact-section .section-content .text-panel p {
+    font-size: 1.2em;
+  }
+  .contact-section .section-content .contact-form .form-textarea {
+    height: 10em;
   }
 }
 /* -------------------------------------------------------------------------- */

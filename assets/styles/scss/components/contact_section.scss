@@ -1,10 +1,9 @@
 /* -------------------------------------------------------------------------- */
 .contact-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    .contact-form {
-
+    .section-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 }
 /* -------------------------------------------------------------------------- */
@@ -16,8 +15,16 @@
         .section-content {
             max-width: 800px !important;
             margin: 0 auto;
-            .form-textarea {
-                height: 14em;
+            .text-panel {
+                padding: 1.4em 0;
+                p {
+                    font-size: 1.2em;;
+                }
+            }
+            .contact-form {
+                .form-textarea {
+                    height: 10em;
+                }
             }
         }
     }
