@@ -1,10 +1,6 @@
 @charset "UTF-8";
 /* -------------------------------------------------------------------------- */
-.hard-skills-section {
-  width: 100%;
-}
 .hard-skills-section .section-content {
-  width: 100%;
   display: flex;
   flex-direction: column;
 }

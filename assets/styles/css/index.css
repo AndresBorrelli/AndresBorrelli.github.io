@@ -181,7 +181,7 @@ a:visited, a:active {
   flex-direction: column;
   background-color: var(--footer-bg-color);
   color: var(--footer-font-color);
-  padding: 0.4rem;
+  padding: 0.4rem 2em;
 }
 .main-footer .footer-linkedin {
   display: flex;

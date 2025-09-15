@@ -1,13 +1,11 @@
 /* -------------------------------------------------------------------------- */
 .job-exp-section {
-    width: 100%;
     .section-content {
-        width: 100%;
         display: flex;
         flex-flow: column nowrap;
         gap: .8rem;
         .job-exp-card {
-            border-top: 1px solid #0c0c0c;
+            border-top: 1px solid var(--main-font-color);
             .job-exp-title {
                 padding-top: .4em;
                 font-weight: 400;
