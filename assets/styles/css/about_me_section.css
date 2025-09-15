@@ -2,6 +2,10 @@
 .about-me-section {
   height: 100%;
 }
+.about-me-section .section-content p {
+  line-height: 1.8em;
+  margin-bottom: 1em;
+}
 
 /* -------------------------------------------------------------------------- */
 /* Media queries 

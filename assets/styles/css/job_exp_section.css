@@ -8,6 +8,9 @@
 .job-exp-section .section-content .job-exp-card {
   border-top: 1px solid var(--main-font-color);
 }
+.job-exp-section .section-content .job-exp-card * {
+  margin-bottom: 0.4em;
+}
 .job-exp-section .section-content .job-exp-card .job-exp-title {
   padding-top: 0.4em;
   font-weight: 400;

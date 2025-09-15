@@ -6,18 +6,15 @@
         gap: .8rem;
         .job-exp-card {
             border-top: 1px solid var(--main-font-color);
+            * {
+                margin-bottom: .4em;
+            }
             .job-exp-title {
                 padding-top: .4em;
                 font-weight: 400;
             }
             .job-exp-employer {
                 font-weight: 400;
-            }
-            .job-exp-location {
-
-            }
-            .job-exp-period {
-
             }
             ul {
                 padding: .4em;

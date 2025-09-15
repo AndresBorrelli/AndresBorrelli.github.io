@@ -43,7 +43,7 @@
 }
 .home-section .section-content .panel-b p {
   font-size: 1.2em;
-  text-justify: distribute;
+  text-align: justify;
 }
 .home-section .section-content .panel-b .download-cv {
   width: 50%;

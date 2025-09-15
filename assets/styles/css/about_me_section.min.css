@@ -1,1 +1,1 @@
-.about-me-section{height:100%}@media only screen and (min-width: 768px){.about-me-section{max-width:800px !important;margin:0 auto !important;display:flex;flex-flow:column nowrap;gap:2rem}}
+.about-me-section{height:100%}.about-me-section .section-content p{line-height:1.8em;margin-bottom:1em}@media only screen and (min-width: 768px){.about-me-section{max-width:800px !important;margin:0 auto !important;display:flex;flex-flow:column nowrap;gap:2rem}}
