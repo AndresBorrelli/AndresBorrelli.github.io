@@ -30,20 +30,34 @@
   justify-content: space-evenly;
   gap: 1em;
   align-items: center;
+  /* Opcional: Para asegurar que el SVG no se deforme */
 }
 .home-section .section-content .panel-b h1 {
   text-align: center;
   font-size: 1.2rem;
   color: #8f8f8f;
+  span-display: block;
+  span-font-family: serif;
+  span-font-size: 2em !important;
+  span-color: #000;
 }
-.home-section .section-content .panel-b h1 span:nth-child(1) {
-  font-family: serif;
-  font-size: 2em !important;
-  color: #000;
+.home-section .section-content .panel-b h1 strong {
+  display: block;
 }
 .home-section .section-content .panel-b p {
   font-size: 1.2em;
-  text-align: justify;
+  text-align: center;
+}
+.home-section .section-content .panel-b .home-linkedin {
+  display: inline-flex; /* Mantiene el enlace como bloque en línea pero activa Flexbox */
+  align-items: center; /* Centrado vertical perfecto */
+  gap: 8px; /* Espaciado moderno entre icono y texto (reemplaza al &nbsp;) */
+  text-decoration: none; /* Limpieza visual */
+  color: inherit; /* Mantiene el color del entorno */
+}
+.home-section .section-content .panel-b .home-linkedin svg {
+  display: block; /* Elimina espacios fantasma debajo del SVG */
+  flex-shrink: 0; /* Evita que el icono se achique si el texto es muy largo */
 }
 .home-section .section-content .panel-b .download-cv {
   width: 50%;

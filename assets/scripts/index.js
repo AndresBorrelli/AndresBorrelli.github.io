@@ -55,7 +55,7 @@ function loadSectionStyles(section) {
         link.href = cssFile;
         document.head.appendChild(link);
     } else {
-        console.warn('No se encontró el archivo CSS para la sección:', section.id);
+        console.warn('No se especificó el archivo CSS para la sección:', section.id);
         return(false);
     }
 }
@@ -74,6 +74,7 @@ function loadSection(entries, observer) {
                 xhr.open('GET', src, true);
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
+                        loadSectionStyles(section);
                         var loader = section.querySelector('.loader');
                         if (loader) {
                             loader.parentNode.removeChild(loader);
@@ -82,9 +83,8 @@ function loadSection(entries, observer) {
                         if (contentDiv) {
                             contentDiv.insertAdjacentHTML('beforeend', xhr.responseText);
                         }
-                        loadSectionStyles(section);
-                        section.classList.add('loaded');
                         section.classList.remove('not-loaded');
+                        section.classList.add('loaded');
                     }
                 };
                 xhr.send();

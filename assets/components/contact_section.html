@@ -1,25 +1,30 @@
     <div class="text-panel">
-        <p>Dejame tu mensaje en este formulario y lo contestaré a la brevedad</p>
+        <p>Dejame tu mensaje o consulta en este formulario y lo contestaré a la brevedad</p>
     </div>
 
-    <form id="_contact-form" action="https://formspree.io/f/xdkddqby" class="main-form contact-form" target="_top" method="POST">
+    <form id="_contact-form" action="https://formspree.io/f/xdkddqby" class="main-form contact-form" aria-describedby="contact-info"
+          target="_top" method="POST" >
+
         <div class="form-field">
             <label class="form-label" for="name">Tu nombre:</label>
-            <input id="name" name="name" required class="form-input" type="text" maxlength="64" />
+            <input id="name" name="name" required aria-required="true" 
+                   placeholder="Tu nombre" class="form-input" type="text" maxlength="64" />
         </div>
         
         <div class="form-field">
             <label class="form-label" for="email">Tu correo electrónico</label>
-            <input type="email" id="email" name="email" class="form-input" required />
+            <input type="email" id="email" name="email" requiered aria-required="true" 
+                   placeholder="Tu correo electrónico" class="form-input" required />
         </div>
 
         <div class="form-field">
             <label class="form-label" for="message">Tu mensaje</label>
-            <textarea id="message" name="message" class="form-textarea" required maxlength="256"></textarea>
+            <textarea id="message" name="message" class="form-textarea" required aria-required="true" 
+                    placeholder="Tu consulta (hasta 512 caracteres)" maxlength="512"></textarea>
         </div>
 
         <div class="form-button-group">
-            <button class="form-button send" type="submit">Enviar</button>
+            <button class="form-button send" type="submit" aria-label="Enviar mensaje de contacto">Enviar</button>
         </div>
 
     </form>

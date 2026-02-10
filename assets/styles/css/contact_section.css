@@ -3,6 +3,19 @@
   display: flex;
   flex-direction: column;
 }
+.contact-section input::-moz-placeholder, .contact-section textarea::-moz-placeholder {
+  color: #c0c0c0;
+  font-style: italic;
+  font-weight: 300;
+  opacity: 1;
+}
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+  color: #c0c0c0;
+  font-style: italic;
+  font-weight: 300;
+  opacity: 1;
+}
 
 /* -------------------------------------------------------------------------- */
 /* Media queries                                                              */
