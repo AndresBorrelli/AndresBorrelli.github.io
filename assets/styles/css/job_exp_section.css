@@ -5,9 +5,6 @@
   flex-flow: column nowrap;
   gap: 0.8rem;
 }
-.job-exp-section .section-content .job-exp-card {
-  border-top: 1px solid var(--main-font-color);
-}
 .job-exp-section .section-content .job-exp-card * {
   margin-bottom: 0.4em;
 }

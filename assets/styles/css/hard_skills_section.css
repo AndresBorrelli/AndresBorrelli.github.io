@@ -8,10 +8,16 @@
   width: 100%;
   flex-wrap: wrap;
 }
+.hard-skills-section .section-content .hard-skills-card h3 {
+  font-weight: 600;
+}
 .hard-skills-section .section-content .hard-skills-card ul {
   display: flex;
   flex-direction: column;
   padding: 0.8rem;
+}
+.hard-skills-section .section-content .hard-skills-card ul li {
+  padding-top: 1rem;
 }
 
 /* -------------------------------------------------------------------------- */

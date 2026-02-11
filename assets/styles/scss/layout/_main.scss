@@ -28,6 +28,8 @@ body {
         margin: 0 auto;
         .section-title {
             padding-bottom: 1rem;
+            border-top: 1px solid #000;
+            line-height: 1.4em;
         }
         .section-content {
             width: 100%;
@@ -44,23 +46,16 @@ body {
     border-bottom-color: var(--loader-color-2);
     border-radius: 50%;
     margin: calc(100dvh / 2 - 24px) auto;
-    animation: rotation 750ms linear infinite;
+    animation: loader-rotation 750ms linear infinite;
     z-index: 9;
 }
 /* -------------------------------------------------------------------------- */
-@keyframes rotation {
+@keyframes loader-rotation {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
-}
-/* -------------------------------------------------------------------------- */
-/* Media queries 
-/* -------------------------------------------------------------------------- */
-@media only screen and (min-width: 768px) {
-
-
 }
 /* -------------------------------------------------------------------------- */
