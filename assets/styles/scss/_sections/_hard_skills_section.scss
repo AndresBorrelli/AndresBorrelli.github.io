@@ -1,0 +1,53 @@
+/* -------------------------------------------------------------------------- */
+/* LAYOUT DE LA SECCION HABILIDADES TECNICAS                                  */
+/* -------------------------------------------------------------------------- */
+.hard-skills-section {
+    .section-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        .hard-skills-card {
+            .section-subtitle {
+                line-height: 2.3rem;
+            }
+
+            ul li {
+                padding-top: .5em;
+                line-height: 1.3em;
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* MEDIA QUERIES                                                              */
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+    .hard-skills-section {
+        .section-content {
+            display: flex;
+            flex-direction: row !important;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1rem;
+
+            .hard-skills-card {
+                flex: 1 1 49%;
+
+                .section-subtitle {
+                    line-height: 2.3rem;
+                }
+
+                ul li {
+                    padding-top: .5em;
+                    line-height: 1.3em;
+                }
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */

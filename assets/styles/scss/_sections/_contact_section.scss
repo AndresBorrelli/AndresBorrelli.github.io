@@ -1,0 +1,27 @@
+/* -------------------------------------------------------------------------- */
+/* LAYOUT DE LA SECCION CONTACTO                                              */
+/* -------------------------------------------------------------------------- */
+.contact-section {
+    .section-content {
+        display: flex; flex-direction: column; justify-content: start; gap: 2rem;
+        width: 100%;
+        .contact-form {
+            .form-textarea {
+                height: 6em;
+            }
+        }
+    }
+
+}
+/* -------------------------------------------------------------------------- */
+/* MEDIA QUERIES                                                              */
+/* -------------------------------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+    .section-content {
+        .contact-form {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
+/* -------------------------------------------------------------------------- */

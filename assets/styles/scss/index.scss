@@ -1,6 +1,9 @@
-@use './base/resets';
-@use './abstract/variables';
-@use './layout/header';
-@use './layout/footer';
-@use './layout/main-form';
-@use './layout/main';
+@use './_base/resets';
+@use './_base/variables';
+@use './_base/pageLayout';
+@use './_base/formElements';
+@use './_sections/home_section';
+@use './_sections/about_me_section';
+@use './_sections/hard_skills_section';
+@use './_sections/job_exp_section';
+@use './_sections/contact_section';

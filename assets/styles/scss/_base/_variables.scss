@@ -1,0 +1,31 @@
+/* -------------------------------------------------------------------------- */
+/*                                                                            */
+/* -------------------------------------------------------------------------- */
+
+:root {
+    /* ---------------------------------------------------------------------- */
+    --content-max-width: 1100px;
+    --hdr-height: 3rem;
+    /* ---------------------------------------------------------------------- */
+    --logo-color: #0076B8;
+    --main-color: #101010;
+    --main-accent-color: #000;
+    --main-bgcolor: #F5F5F5;
+    --hdr-color: #495057;
+    --hdr-bgcolor: rgb(245, 245, 245, .95);
+    --ftr-color: #f4f3ee;
+    --ftr-accent-color: #fff;
+    --ftr-bgcolor: #868686;
+    --a-hover: #f06543;
+    --ph-color: #c6c6c6;
+    --btn-send-color: #f4f3ee;
+    --btn-send-bgcolor: #5594BF;
+    --btn-lang-color: #fff;
+    --btn-lang-bgcolor: #5594BF; //#ff0045;
+    @media only screen and (min-width: 768px) {
+        --main-color: #868686;
+        --main-accent-color: #747474;
+        --main-bgcolor: #F5F5F5;
+    }    
+}
+/* -------------------------------------------------------------------------- */

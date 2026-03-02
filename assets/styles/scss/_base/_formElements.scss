@@ -1,0 +1,27 @@
+/* -------------------------------------------------------------------------- */
+/* ESTILOS PARA FORMULARIOS                                                   */
+/* -------------------------------------------------------------------------- */
+.main-form {
+    display: flex; flex-direction: column; justify-content: flex-start; gap: .5rem;
+    .form-field {
+        display: flex; flex-direction: column; justify-content: flex-start; gap: .25rem;
+        .form-input, .form-textarea {
+            padding: .25em;
+            &::placeholder {
+                color: var(--ph-color);
+            }
+        }
+    }
+}
+
+.form-button, button {
+    padding: .5em 1em;
+    border: 1px solid;
+    border-radius: .5em;
+    cursor: pointer;
+    &.send {
+        color: var(--btn-send-color);
+        background-color: var(--btn-send-bgcolor);
+    }
+}
+/* -------------------------------------------------------------------------- */

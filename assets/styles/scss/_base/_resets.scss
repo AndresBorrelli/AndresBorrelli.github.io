@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------- */
-/*   R E S E T S                                                              */
+/* RESETS DE BASE                                                             */
 /* -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -17,11 +17,6 @@ ul, ol {
 
 input, button, textarea, select {
   font: inherit;
-}
-
-img, picture {
-  max-width: 100%;
-  display: block;
 }
 
 a {
