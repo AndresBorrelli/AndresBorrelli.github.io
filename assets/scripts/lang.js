@@ -10,7 +10,7 @@
     if ((preferredLang === 'en' || (!preferredLang && browserLang.startsWith('en'))) && !isEnPage) {
         window.location.replace("index_en.html");
     } else if (preferredLang === 'es' && isEnPage) {
-        window.location.replace("index.html");
+        window.location.replace("./");
     }
 
 })();

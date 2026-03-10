@@ -85,7 +85,7 @@ function toggleLang(lang) {
 
     localStorage.setItem('user-lang', lang);
 
-    const target = (lang === 'en') ? "index_en.html" : "index.html";
+    const target = (lang === 'en') ? "index_en.html" : "./";
     
     window.location.replace(target);
 
