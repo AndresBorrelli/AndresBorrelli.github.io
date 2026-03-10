@@ -3,19 +3,19 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://andresborrelli.github.io/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://andresborrelli.github.io/index.html"/>
+    <loc>https://andresborrelli.github.io/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://andresborrelli.github.io/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://andresborrelli.github.io/index_en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://andresborrelli.github.io/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://andresborrelli.github.io/"/>
     <lastmod>2025-02-18</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://andresborrelli.github.io/index_en.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://andresborrelli.github.io/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://andresborrelli.github.io/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://andresborrelli.github.io/index_en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://andresborrelli.github.io/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://andresborrelli.github.io/"/>
     <lastmod>2025-02-18</lastmod>
     <priority>0.8</priority>
   </url>
