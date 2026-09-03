@@ -18,5 +18,7 @@
     "liveSassCompile.settings.autoprefix": [
         "defaults"
     ],
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 8888,
+    "liveServer.settings.root": "/",
+    "liveServer.settings.multiRootWorkspaceName": "",
 }
