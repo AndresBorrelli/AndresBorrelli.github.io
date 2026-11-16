@@ -1,5 +1,5 @@
 // -----------------------------------------------------------------------------
-// V A L I D A R   F O R M U L A R I O   D E   C O N T A C T O
+// VALIDACIONES PARA EL FORMULARIO DE CONTACTO
 // -----------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nameInput.value = sanitizeInput(nameInput.value.trim());
         emailInput.value = sanitizeInput(emailInput.value.trim());
         messageInput.value = sanitizeInput(messageInput.value.trim());
-        
+
     });
 
 });

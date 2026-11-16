@@ -1,0 +1,62 @@
+//------------------------------------------------------------------------------
+// BREAKPOINTS S/DISPOSITIVO
+//------------------------------------------------------------------------------
+@use "sass:map";
+//------------------------------------------------------------------------------
+
+$breakpoints: (
+    'mobile-portrait': 767px,
+    'mobile-landscape': 600px,
+    'tablet-portrait': 768px,
+    'tablet-landscape': 1024px,
+    'desktop': 768px
+);
+//------------------------------------------------------------------------------
+// MEDIA QUERY S/VIEWPORT
+//------------------------------------------------------------------------------
+@mixin device-types($types...) {
+  @each $type in $types {
+    @if $type == 'mobile-portrait' {
+      // Móvil vertical: Ancho menor al de tablet + orientación portrait
+      @media screen 
+        and (max-width: map.get($breakpoints, 'mobile-portrait')) 
+        and (orientation: portrait) {
+        @content;
+      }
+    }
+    @else if $type == 'mobile-landscape' {
+      @media screen 
+        and (min-width: map.get($breakpoints, 'mobile-landscape')) 
+        and (max-width: map.get($breakpoints, 'tablet-landscape')) 
+        and (orientation: landscape) 
+        and (max-height: 750px) {
+        @content;
+      }
+    }
+    @else if $type == 'tablet-portrait' {
+      @media screen 
+        and (min-width: map.get($breakpoints, 'tablet-portrait')) 
+        and (orientation: portrait) {
+        @content;
+      }
+    }
+    @else if $type == 'desktop' {
+      @media only screen 
+        and (min-width: map.get($breakpoints, 'desktop')) 
+        and (hover: hover) {
+        @content;
+      }
+    }
+  }
+}
+//------------------------------------------------------------------------------
+// MEDIA QUERY S/PUNTERO 
+//------------------------------------------------------------------------------
+@mixin device-hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+//------------------------------------------------------------------------------

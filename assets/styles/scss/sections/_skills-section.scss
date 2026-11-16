@@ -1,0 +1,49 @@
+//------------------------------------------------------------------------------
+// Estilos para sección sobre mí
+//------------------------------------------------------------------------------
+@use './../abstracts/mixins/media-queries' as *;
+
+//------------------------------------------------------------------------------
+section.skills-section {
+    .section-content {
+        display: flex;
+        flex-flow: row wrap;
+        gap: var(--gap-sm);
+
+        .card {
+            .card-items {
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                gap: var(--gap-sm);
+                .card {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Mobile landscape
+@include device-types('mobile-landscape') {
+    section.skills-section {
+        .section-content {
+            .card {
+                flex: 1 0 49%;
+            }
+        }
+    }
+}
+//------------------------------------------------------------------------------
+// Desktop
+@include device-types('desktop') {
+    section.skills-section {
+        .section-content {
+            .card {
+                flex: 1 0 48%;
+            }
+        }
+    }
+}
+//------------------------------------------------------------------------------

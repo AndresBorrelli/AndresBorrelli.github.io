@@ -1,9 +1,26 @@
-@use './_base/resets';
-@use './_base/variables';
-@use './_base/pageLayout';
-@use './_base/formElements';
-@use './_sections/home_section';
-@use './_sections/about_me_section';
-@use './_sections/hard_skills_section';
-@use './_sections/job_exp_section';
-@use './_sections/contact_section';
+//------------------------------------------------------------------------------
+// UNICAMENTE INCLUSION DE LOS ARCHIVOS DE ESTILOS .SCSS
+//------------------------------------------------------------------------------
+@use './abstracts/variables/typo-vars';
+@use './abstracts/variables/dimension-vars';
+@use './abstracts/variables/color-vars';
+//------------------------------------------------------------------------------
+@use './base/css-resets';
+@use './base/site-resets';
+//------------------------------------------------------------------------------
+@use './components/buttons';
+@use './components/content-deco';
+@use './components/forms';
+//------------------------------------------------------------------------------
+@use './layout/header';
+@use './layout/nav';
+@use './layout/footer';
+//------------------------------------------------------------------------------
+@use './sections/home-section';
+@use './sections/about-section';
+@use './sections/skills-section';
+@use './sections/jobs-section';
+@use './sections/contact-section';
+//------------------------------------------------------------------------------
+
+

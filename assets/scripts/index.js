@@ -1,9 +1,8 @@
 // -----------------------------------------------------------------------------
 //  
 // -----------------------------------------------------------------------------
-var delayForDebug = 0;
 
-var sectionsToLoad = [];
+var sectionsToObserve = [];
 
 var sectionObserver;
 
@@ -14,22 +13,27 @@ const sectionObserverOptions = {
 };
 
 var navItems;
- 
+
 // -----------------------------------------------------------------------------
-window.addEventListener('load', function(e) {
+window.addEventListener('load', function (e) {
+
+    const preferredLang = localStorage.getItem('user-lang');
+    const browserLang = navigator.language || navigator.userLanguage;
+    const isEnPage = window.location.pathname.includes('index_en.html');
+
+    if ((preferredLang === 'en' || (!preferredLang && browserLang.startsWith('en'))) && !isEnPage) {
+        window.location.replace("index_en.html");
+    } else if (preferredLang === 'es' && isEnPage) {
+        window.location.replace("./");
+    }
 
     var mainElement = document.querySelector('main');
-    
-    delayForDebug = mainElement && mainElement.getAttribute('delayForDebug') ? parseInt(mainElement.getAttribute('delayForDebug')) * 1000 : 0;
 
     mainNav = this.document.querySelector('#main_nav');
 
     navItems = document.querySelectorAll('.nav-item');
-    footerNavItems = document.querySelectorAll('.footer-nav-item');
-  
-    setNavItemsEvents();
 
-    setSectionLoaders();
+    sectionsObserver();
 
     var langToggle = this.document.getElementById('lang_toggle');
 
@@ -41,36 +45,26 @@ window.addEventListener('load', function(e) {
 
 });
 //------------------------------------------------------------------------------
-function setNavItemsEvents() {
+function sectionsObserver() {
 
-    for (var i = 0; i < navItems.length; i++) {
-        navItems[i].addEventListener('click', function (e) {
-            var mainNavButton = document.getElementById('nav_button');
-            mainNavButton.checked = false;
-        });
+    sectionObserver = new IntersectionObserver(sectionObserved, sectionObserverOptions);
+
+    sectionsToObserve = document.querySelectorAll('section.main-section');
+
+    for (var i = 0; i < sectionsToObserve.length; i++) {
+        sectionObserver.observe(sectionsToObserve[i]);
     }
+
 }
 //------------------------------------------------------------------------------
-function setSectionLoaders() {
-
-    sectionObserver = new IntersectionObserver(loadSection, sectionObserverOptions);
-
-    sectionsToLoad = document.querySelectorAll('section.main-section');
-
-    for (var i = 0; i < sectionsToLoad.length; i++) {
-        sectionObserver.observe(sectionsToLoad[i]);
-    }
-    
-}   
-//------------------------------------------------------------------------------
-function loadSection(entries, observer) {
+function sectionObserved(entries, observer) {
 
     var entry = entries[0];
 
     if (entry.isIntersecting) {
         var section = entry.target;
         for (var i = 0; i < navItems.length; i++) {
-            navItems[i].classList.remove('active'); 
+            navItems[i].classList.remove('active');
         }
         const activeLink = document.querySelector(`.nav-item[href="#${section.id}"]`);
         if (activeLink) {
@@ -86,7 +80,7 @@ function toggleLang(lang) {
     localStorage.setItem('user-lang', lang);
 
     const target = (lang === 'en') ? "index_en.html" : "./";
-    
+
     window.location.replace(target);
 
 }

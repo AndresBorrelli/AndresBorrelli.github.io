@@ -1,0 +1,53 @@
+//------------------------------------------------------------------------------
+// Estilos para sección sobre mí
+//------------------------------------------------------------------------------
+@use './../abstracts/mixins/media-queries' as *;
+
+//------------------------------------------------------------------------------
+section.about-section {
+    .section-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-sm);
+        .section-paragraph {
+            font-size: 1.1rem;
+            padding: var(--gap-xl);
+            background-color: var(--base-300);
+            border-radius: 6px;
+        }
+        .cards-group {
+            display: flex;
+            flex-flow: row wrap;
+            gap: var(--gap-md);
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    }
+}
+//------------------------------------------------------------------------------
+// Mobile landscape
+@include device-types('mobile-landscape') {
+    section.about-section {
+        .section-content {}
+    }
+}
+
+//------------------------------------------------------------------------------
+// Desktop
+@include device-types('desktop') {
+    section.about-section {
+        .section-content {
+            .cards-group {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: stretch;
+                gap: var(--gap-md);
+                .card {
+                    flex: 0 0 49%;
+                }
+            }
+        }
+    }
+}
+//------------------------------------------------------------------------------

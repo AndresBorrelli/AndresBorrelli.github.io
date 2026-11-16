@@ -1,0 +1,166 @@
+//------------------------------------------------------------------------------
+// Estilos para diferentes contenidos
+//------------------------------------------------------------------------------
+@use './../abstracts/mixins/media-queries' as *;
+//------------------------------------------------------------------------------
+.section-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: var(--gap-md);
+    .section-title {
+        order: 2;
+        flex: 1 0 100%;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-weight: var(--bold-font);
+        font-size: 2rem;
+        color: var(--base-1800);
+        &::before {
+            display: block;
+            height: 100%;
+            width: 6px;
+            border-radius: 3px;
+            background-color: var(--accent-600);
+            content: ' ';
+        }
+    }
+    .section-kicker {
+        order: 1;
+        font-family: var(--accent-fonts);
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: var(--base-1200);
+        padding-left: 12px;
+    }
+    .section-deck {
+        order: 3;
+        font-family: var(--content-fonts);
+        font-size: .8rem;
+    }
+}
+//------------------------------------------------------------------------------
+// Mobile landscape / desktop
+@include device-types('mobile-landscape', 'desktop') {
+    .section-header {
+        .section-kicker {
+            flex: 0 1 40%;
+            order: 2;
+            text-align: right;
+        }
+        .section-title {
+            flex: 0 1 50%;
+            order: 1;
+        }
+    }
+}
+//------------------------------------------------------------------------------
+.card {
+    background-color: var(--base-300);
+    padding: var(--gap-lg);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    .card-title {
+        font-weight: var(--bold);
+        font-size: 1.25rem;
+        color: var(--base-1800);
+    }
+    .card-content {
+    }
+    .card-footer {
+        margin-top: auto;
+        font-family: var(--accent-fonts);
+        color: var(--accent-600);
+    }
+}
+//------------------------------------------------------------------------------
+.sub-card {
+    background-color: var(--base-100);
+    padding: var(--gap-lg);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+    .sub-card-title {
+        font-weight: var(--bold-font);
+        font-size: 1.1rem;
+        color: var(--base-1800);
+    }
+    .sub-card-content {
+        font-size: .9rem;
+        color: var(--base-1500);
+    }
+    .sub-card-footer {
+        margin-top: auto;
+        font-family: var(--accent-fonts);
+        color: var(--accent-600);
+    }
+}
+//------------------------------------------------------------------------------
+.job-card {
+    background-color: var(--base-300);
+    border-radius: 6px;
+    padding: var(--gap-sm);
+    .job-header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .job-title {
+            order: 3;
+            font-weight: var(--bold-font);
+        }
+        .job-employer {
+            order: 3;
+            font-weight: var(--bold-font);
+        }
+        .job-location {
+            order: 2;
+            text-align: right;
+            color: var(--base-1500);
+        }
+        .job-period {
+            order: 1;
+            font-family: var(--accent-fonts);
+            font-weight: var(--bold-font);
+            color: var(--accent-600);
+        }
+    }
+}
+//------------------------------------------------------------------------------
+.job-sub-card {
+    background-color: var(--base-100);
+    border-radius: 6px;
+    padding: var(--gap-sm);
+    .job-sub-card-title {
+        font-family: var(--accent-fonts);
+        font-weight: var(--bold-font);
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        &::before {
+            display: block;
+            height: 6px;
+            width: 6px;
+            border-radius: 3px;
+            background-color: var(--accent-600);
+            content: ' ';
+        }
+    }
+    p {
+        padding: var(--gap-sm) 0 ;
+    }
+    strong {
+        font-weight: var(--bold-font);
+    }
+      
+}
+//------------------------------------------------------------------------------
+.job-card:last-child {
+    .job-sub-card {
+        border: 1px solid var(--base-1200);
+    }
+}
