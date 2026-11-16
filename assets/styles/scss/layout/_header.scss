@@ -1,0 +1,90 @@
+//------------------------------------------------------------------------------
+// Estilos para el header
+//------------------------------------------------------------------------------
+@use './../abstracts/mixins/media-queries' as *;
+
+//------------------------------------------------------------------------------
+header.main-header {
+    display: flex;
+    justify-content: center;
+
+    .header-wrapper {
+        position: fixed;
+        max-width: var(--body-max-width);
+        margin-inline: var(--gap-md) !important;
+        top: 0px;
+        width: 100%;
+        height: var(--header-height);
+        padding-inline: var(--gap-md);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--gap-md);
+        background-color: var(--base-200);
+        z-index: 999;
+
+        .brand-block {
+            flex: 1 0 auto;
+
+            .brand-link {
+                .header-name {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    font-weight: var(--bold-font);
+                    font-size: 1rem;
+                    color: var(--base-1800);
+
+                    &::before {
+                        display: block;
+                        height: 6px;
+                        width: 6px;
+                        border-radius: 3px;
+                        background-color: var(--accent-600);
+                        content: ' ';
+                    }
+                }
+
+                .header-title {
+                    padding-left: 10px;
+                    font-weight: var(--bold-font);
+                    font-size: .6rem;
+                    color: var(--base-1400);
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .lang-block {
+
+            .lang-toggle {
+                font-family: var(--accent-fonts);
+                font-weight: var(--boldest-font);
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: var(--accent-500);
+                }
+            }
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Mobile landscape
+@include device-types('mobile-landscape') {
+    header.main-header {
+        display: flex;
+        justify-content: center;
+        .header-wrapper {
+            justify-content: flex-start !important;
+            height: var(--header-height-sm);
+            z-index: 999;
+            .brand-block {
+                flex: 0 0 auto;
+            }
+        }
+    }
+}
+
+//------------------------------------------------------------------------------

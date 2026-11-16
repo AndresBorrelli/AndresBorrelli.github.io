@@ -1,0 +1,56 @@
+//------------------------------------------------------------------------------
+// Estilos para sección sobre mí
+//------------------------------------------------------------------------------
+@use './../abstracts/mixins/media-queries' as *;
+
+//------------------------------------------------------------------------------
+section.contact-section {
+    height: 100dvh;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--gap-sm);
+    .section-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        gap: var(--gap-sm);
+
+        .contact-deck {
+            flex: 1 0 100%;
+        }
+
+        .contact-form {
+            flex: 1 0 100%;
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Mobile landscape
+@include device-types('mobile-landscape') {
+    section.contact-section {
+        height: auto;
+        .section-content {}
+    }
+}
+
+//------------------------------------------------------------------------------
+// Desktop
+@include device-types('desktop') {
+    section.contact-section {
+        
+        .section-content {
+        flex-flow: row nowrap;
+            gap: var(--gap-lg);
+            .contact-deck {
+                flex: 1 1 40%;
+            }
+
+            .contact-form {
+                flex: 1 1 auto;
+            }
+        }
+    }
+}
+
+//------------------------------------------------------------------------------

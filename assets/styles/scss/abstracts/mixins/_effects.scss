@@ -1,0 +1,35 @@
+//------------------------------------------------------------------------------
+// EFECTOS VISUALES
+//------------------------------------------------------------------------------
+@mixin dotted-link($color: orangered, $duration: 0.25s, $timing: ease) {
+    &::before {
+        display: inline-block;
+        content: '\2022';
+        color: $color;
+        padding-right: .25em;
+        visibility: hidden;
+
+    }    
+    &:hover::before,
+    &.active::before {
+        visibility: visible;
+        transition: visibility $duration $timing;
+    }
+
+}
+//------------------------------------------------------------------------------
+@mixin undo-dotted-link {
+    &::before {
+        content: '';
+        padding-right: 0;
+        visibility: hidden;
+
+    }    
+    &:hover::before,
+    &.active::before {
+        visibility: hidden;
+        transition: none;
+    }
+
+}
+//------------------------------------------------------------------------------

@@ -1,0 +1,23 @@
+//------------------------------------------------------------------------------
+// Estilos para el header
+//------------------------------------------------------------------------------
+@use './../abstracts/mixins/media-queries' as *;
+
+//------------------------------------------------------------------------------
+footer.main-footer {
+    min-height: 50dvh;
+    height: 50dvh;
+    background-color: var(--base-1400);
+    color: var(--base-100);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-xl);
+    margin-bottom: var(--nav-height);
+    .cookies-note {
+        text-align: center;
+    }
+}
+
+//------------------------------------------------------------------------------

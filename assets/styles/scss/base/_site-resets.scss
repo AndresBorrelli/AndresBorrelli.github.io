@@ -1,0 +1,43 @@
+//------------------------------------------------------------------------------
+// SETEOS BASICOS
+//------------------------------------------------------------------------------
+@use './../abstracts/mixins/media-queries' as *;
+//------------------------------------------------------------------------------
+html {
+    scroll-behavior: smooth;
+    font-family: var(--content-fonts);
+    font-weight: var(--normal-font);
+    font-size: var(--base-font-size);    
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+//------------------------------------------------------------------------------
+body {
+    background-color: var(--base-200);
+}
+//------------------------------------------------------------------------------
+section {
+    scroll-margin-top: var(--header-height);
+    min-height: 100dvh;
+    max-width: var(--body-max-width);
+    margin: 0 auto;
+    padding: var(--gap-md);
+}
+//------------------------------------------------------------------------------
+footer {
+    max-width: var(--body-max-width);
+    margin: 0 auto;
+}
+//------------------------------------------------------------------------------
+// Mobile landscape
+@include device-types('mobile-landscape') {
+    section {
+        scroll-margin-top: var(--header-height-sm);
+        min-height: 100dvh;
+        max-width: var(--body-max-width);
+        margin: 0 auto;
+        padding: var(--gap-md);
+    }
+}
+//------------------------------------------------------------------------------

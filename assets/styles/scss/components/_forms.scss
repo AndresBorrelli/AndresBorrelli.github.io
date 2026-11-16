@@ -1,0 +1,141 @@
+//------------------------------------------------------------------------------
+// Estilos generales para los formularios
+//------------------------------------------------------------------------------
+@use './../abstracts/mixins/media-queries' as *;
+
+//------------------------------------------------------------------------------
+form.main-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-lg);    
+    justify-content: space-between;
+    background-color: var(--base-100);
+    border-radius: 6px;
+    padding: var(--gap-lg);
+
+    .form-field {
+        flex-grow: 1;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        gap: var(--gap-xs);
+        .form-label {
+            font-weight: var(--normal-font);
+            font-size: .9rem;
+            color: var(--base-1500);
+        }
+
+        .form-input,
+        textarea {
+            width: 100%;
+            font-weight: var(--normal-font);
+            font-size: 1rem;
+            color: var(--base-1800);
+            border: 1px solid var(--base-1600);
+            outline: 0;
+
+            &::placeholder {
+                color: var(--base-800);
+            }
+        }
+    }
+
+    .form-buttons-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .form-button {
+            font-weight: var(--normal-font);
+            font-size: 1.2rem;
+            background-color: var(--base-1800);
+            color: var(--base-400);
+            border: 0;
+            padding: .5rem 1rem;
+            transition: color 225ms ease,
+                        background 225ms ease;
+            cursor: pointer;
+            &:hover {
+                background-color: var(--base-1600);
+                color: var(--base-100);
+            }
+
+            &.reset {
+                background-color: var(--accent-600);
+                color: var(--base-400);
+
+                &:hover {
+                    background-color: var(--accent-400);
+                    color: var(--base-100);
+                }
+            }
+        }
+    }
+}
+
+//------------------------------------------------------------------------------
+// Mobile landscape / desktop
+@include device-types('mobile-landscape', 'desktop') {
+    form.main-form {
+        .form-field {
+            flex: 1 0 100%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+
+            .form-label {
+                font-weight: var(--normal-font);
+                font-size: .9rem;
+                color: var(--base-1500);
+            }
+
+            .form-input,
+            textarea {
+                width: 100%;
+                font-weight: var(--normal-font);
+                font-size: 1rem;
+                color: var(--base-1800);
+                border: 1px solid var(--base-1600);
+                outline: 0;
+
+                &::placeholder {
+                    color: var(--base-800);
+                }
+            }
+        }
+
+        .form-buttons-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+
+            .form-button {
+                font-weight: var(--normal-font);
+                font-size: 1.2rem;
+                background-color: var(--base-1800);
+                color: var(--base-400);
+                border: 0;
+                padding: .5rem 1rem;
+                transition: color 225ms ease,
+                    background-color 225ms ease;
+
+                &:hover {
+                    background-color: var(--base-1600);
+                    color: var(--base-100);
+                }
+
+                &.reset {
+                    background-color: var(--accent-600);
+                    color: var(--base-400);
+
+                    &:hover {
+                        background-color: var(--accent-600);
+                        color: var(--base-100);
+                    }
+                }
+            }
+        }
+    }
+}
