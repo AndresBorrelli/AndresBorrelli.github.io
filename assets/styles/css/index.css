@@ -13,8 +13,10 @@
 :root {
   --body-min-width: 360px;
   --body-max-width: 1920px;
+  --header-height-lg: 80px;
   --header-height: 60px;
   --header-height-sm: 40px;
+  --nav-height-lg: 80px;
   --nav-height: 60px;
   --nav-height-sm: 40px;
   --gap-xs: .25rem;
@@ -128,7 +130,7 @@ section {
   min-height: 100dvh;
   max-width: var(--body-max-width);
   margin: 0 auto;
-  padding: var(--gap-md);
+  padding-inline: var(--gap-md);
 }
 
 footer {
@@ -698,6 +700,7 @@ header.main-header .header-wrapper .lang-block .lang-toggle:hover {
 nav.main-nav {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 nav.main-nav .main-nav-wrapper {
   display: flex;
@@ -774,17 +777,12 @@ nav.main-nav .nav-item.contact::before {
 
 @media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) and (max-height: 750px) {
   nav.main-nav .main-nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: fixed;
-    max-width: var(--body-max-width);
+    justify-content: end;
     height: var(--nav-height-sm);
     width: 100%;
     top: 0px;
     bottom: auto;
     background-color: transparent;
-    padding: 2px var(--gap-sm);
     z-index: 9999;
   }
   nav.main-nav .main-nav-wrapper .nav-items {
@@ -796,8 +794,18 @@ nav.main-nav .nav-item.contact::before {
   }
 }
 @media only screen and (min-width: 768px) and (hover: hover) {
-  nav.main-nav .nav-item {
-    font-size: 1rem;
+  nav.main-nav {
+    height: var(--nav-height-lg);
+  }
+  nav.main-nav .main-nav-wrapper .nav-items {
+    gap: 3rem;
+  }
+  nav.main-nav .main-nav-wrapper .nav-items .nav-item {
+    font-size: 1.2rem;
+  }
+  nav.main-nav .main-nav-wrapper .nav-items .nav-item:before {
+    width: 22px;
+    height: 22px;
   }
 }
 footer.main-footer {
@@ -821,12 +829,10 @@ section.home-section {
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  height: calc(100dvh - var(--header-height) - var(--nav-height));
-  margin-top: var(--header-height);
 }
 section.home-section .section-content {
   display: grid;
-  grid-template-areas: "photo name" "title title" "intro intro" "cv    cv" "in    in" "...   go";
+  grid-template-areas: "photo name" "title title" "intro intro" "cv    cv" "in    in" "...   ...S";
   gap: var(--gap-md);
   height: 100%;
   padding: var(--gap-md);
@@ -858,21 +864,14 @@ section.home-section .section-content .cv-area {
   justify-self: center;
   grid-area: cv;
 }
-section.home-section .section-content .go-area {
-  grid-area: go;
-  align-self: self-start;
-  justify-self: end;
-  padding-right: var(--gap-lg);
-}
 
 @media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) and (max-height: 750px) {
   section.home-section {
     height: auto;
-    margin-top: var(--header-height-sm);
   }
   section.home-section .section-content {
     grid-template-columns: 30% 70%;
-    grid-template-areas: "photo name" "photo title" "photo intro" "cv    in" "...   go";
+    grid-template-areas: "photo name" "photo title" "photo intro" "cv    in";
   }
   section.home-section .name-area {
     font-size: 1.4rem !important;
@@ -891,9 +890,12 @@ section.home-section .section-content .go-area {
   }
 }
 @media only screen and (min-width: 768px) and (hover: hover) {
+  section.home-section {
+    height: calc(100dvh - var(--header-height-lg) - var(--nav-height-lg));
+  }
   section.home-section .section-content {
     grid-template-columns: 35% 32.5% 32.5%;
-    grid-template-areas: "photo name name" "photo title title" "photo intro intro" "photo cv    in" "photo ...   go";
+    grid-template-areas: "photo name name" "photo title title" "photo intro intro" "photo cv    in" "photo ...   ...";
   }
   section.home-section .photo-area {
     border-radius: 6px;
@@ -923,6 +925,9 @@ section.home-section .section-content .go-area {
   }
   section.home-section .in-area .in-button {
     font-size: 1.4rem;
+  }
+  section.home-section .cv-area {
+    align-self: self-start;
   }
   section.home-section .cv-area .cv-button {
     font-size: 1.4rem;

@@ -7,7 +7,7 @@
 nav.main-nav {
     display: flex;
     justify-content: center;
-
+    align-items: center;
     .main-nav-wrapper {
         display: flex;
         align-items: center;
@@ -97,19 +97,13 @@ nav.main-nav .nav-item {
 @include device-types('mobile-landscape') {
     nav.main-nav {
         .main-nav-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            position: fixed;
-            max-width: var(--body-max-width);
+            justify-content: end;
             height: var(--nav-height-sm);
             width: 100%;
             top: 0px;
             bottom: auto;
             background-color: transparent;
-            padding: 2px var(--gap-sm);
             z-index: 9999;
-
             .nav-items {
                 height: 100%;
                 display: flex;
@@ -125,8 +119,18 @@ nav.main-nav .nav-item {
 // Desktop
 @include device-types('desktop') {
     nav.main-nav {
-        .nav-item {
-            font-size: 1rem;
+        height: var(--nav-height-lg);
+        .main-nav-wrapper {
+            .nav-items {
+                gap: 3rem;
+                .nav-item {
+                    font-size: 1.2rem;
+                    &:before {
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+            }
         }
     }
 }

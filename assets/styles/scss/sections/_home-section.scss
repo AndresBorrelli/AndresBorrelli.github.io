@@ -9,8 +9,7 @@ section.home-section {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
-    height: calc(100dvh - var(--header-height) - var(--nav-height));
-    margin-top: var(--header-height);
+        
     .section-content {
         display: grid;
         grid-template-areas:
@@ -19,7 +18,7 @@ section.home-section {
             "intro intro"
             "cv    cv"
             "in    in"
-            "...   go"
+            "...   ...S"
         ;
         gap: var(--gap-md);
         height: 100%;
@@ -57,13 +56,6 @@ section.home-section {
             justify-self: center;
             grid-area: cv;
         }
-
-        .go-area {
-            grid-area: go;
-            align-self: self-start;
-            justify-self: end;
-            padding-right: var(--gap-lg);            
-        }
     }
 }
 
@@ -72,7 +64,6 @@ section.home-section {
 @include device-types('mobile-landscape') {
     section.home-section {
         height: auto;
-        margin-top: var(--header-height-sm);
         .section-content {
             grid-template-columns: 30% 70%;
             grid-template-areas:
@@ -80,7 +71,6 @@ section.home-section {
                 "photo title"
                 "photo intro"
                 "cv    in"
-                "...   go"
             ;
         }
         .photo-area {
@@ -106,6 +96,8 @@ section.home-section {
 // Desktop
 @include device-types('desktop') {
     section.home-section {
+        
+        height: calc(100dvh - var(--header-height-lg) - var(--nav-height-lg));
         .section-content {
             grid-template-columns: 35% 32.5% 32.5%;
             grid-template-areas:
@@ -113,7 +105,7 @@ section.home-section {
                 "photo title title"
                 "photo intro intro"
                 "photo cv    in"
-                "photo ...   go"
+                "photo ...   ..."
             ;
         }
         .photo-area {
@@ -146,6 +138,7 @@ section.home-section {
             }
         }
         .cv-area {
+            align-self: self-start;
             .cv-button {
                 font-size: 1.4rem;
             }
